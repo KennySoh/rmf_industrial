@@ -49,12 +49,12 @@ Create a workspace and clone the required repositories:
 mkdir -p ~/ros_industrial_ws
 cd ~/ros_industrial_ws
 
-# Clone this demo package
-git clone <demo-package-url> ros_industrial_demo
-git clone <vda5050-fiware-url> vda5050_fiware_repo
-git clone <mapf-unified-url> mapf_unified_repo
-git clone <task-orchestrator-url> task_orchestrator_repo
-git clone <rmf2-broker-url> rmf2_broker_repo
+# Clone repositories (legacy branch)
+git clone -b legacy <demo-package-url> ros_industrial_demo
+git clone -b legacy <vda5050-fiware-url> vda5050_fiware_repo
+git clone -b legacy <mapf-unified-url> mapf_unified_repo
+git clone -b legacy <task-orchestrator-url> task_orchestrator_repo
+git clone -b legacy <rmf2-broker-url> rmf2_broker_repo
 ```
 
 Build the required Docker images:
