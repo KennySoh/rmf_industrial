@@ -57,7 +57,7 @@ STEPS=(
   "4|MAPF (unified)|Services.0|'$LAUNCH/rmf2_unified_mapf_control.sh' start|port:8888|120"
   "5|Task Orchestrator|Services.1|'$LAUNCH/task_orchestrator_control.sh' start|url:http://localhost:2727/health_check|60"
   "6|Devices (VDA5050)|Devices.0|'$LAUNCH/rmf2_res_vda5050_control.sh' start|logmatch:vda5050_fiware:state|60"
-  "7|Simulation|Sim.0|'$SIM'|sleep:10|-"
+#   "7|Simulation|Sim.0|'$SIM'|sleep:10|-"
   "8|Init System|InitSystem.0|'$LAUNCH/send_init_warehouse_v2.sh'|sleep:5|-"
 #   "9|Send Task|SendTask.0|cd '$TESTS' && python3 send_parallel_workflow_3_robots.py|sleep:3|-"
 )
