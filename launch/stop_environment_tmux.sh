@@ -23,7 +23,7 @@ WS_DIR="$(dirname "$ROS_INDUSTRIAL_DIR")"
 # shellcheck source=start_environment_utils.sh
 source "$LAUNCH/start_environment_utils.sh"
 
-SESSION="ihi_demo"               # our orchestrator session (created by start)
+SESSION="RMF2_Demo"               # our orchestrator session (created by start)
 
 # --- Small helpers -----------------------------------------------------------
 
