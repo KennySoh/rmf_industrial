@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  mapf_unified:
+    container_name: mapf_unified
+    # Build from source (self-contained repo):
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    # Or use pre-built image:
+    image: mapf_unified:latest
+    env_file:
+      - .env
+    ports:
+      # fiware_map_server
+      - "${MAP_SERVER_PORT}:${MAP_SERVER_PORT}"
+      # mapf_solver
+      - "${MAPF_SOLVER_SERVER_PORT}:${MAPF_SOLVER_SERVER_PORT}"
+      # adg_executor
+      - "${AGV_STATE_SERVER_PORT}:${AGV_STATE_SERVER_PORT}"
+      - "${ADG_MQTT_PORT}:${ADG_MQTT_PORT}"
+      # mapf_mrs
+      - "${MRS_MQTT_SERVER_PORT}:${MRS_MQTT_SERVER_PORT}"
+      # movement_request_server
+      - "${MOVEMENT_REQUEST_SERVER_PORT}:${MOVEMENT_REQUEST_SERVER_PORT}"
+    expose:
+      - "${MAP_SERVER_PORT}"
+      - "${MAPF_SOLVER_SERVER_PORT}"
+      - "${AGV_STATE_SERVER_PORT}"
+      - "${ADG_MQTT_PORT}"
+      - "${MRS_MQTT_SERVER_PORT}"
+      - "${MOVEMENT_REQUEST_SERVER_PORT}"
+    networks:
+      - rmf2_broker_rmf-network
+    volumes:
+      # Optional: mount logs for debugging
+      - ./logs:/var/log/supervisor
+      # Mount supervisord.conf for startup fixes without rebuilding
+      - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf:ro
+      # Mount map files for hot-reload without rebuilding
+      - ./src/fiware_map/maps:/colcon_ws/install/fiware_map/share/fiware_map/maps
+      - ./src/mapf/mapf_service/mapf_service/maps:/colcon_ws/install/mapf_service/share/mapf_service/maps
+      # mapf_solver also looks in src directory
+      - ./src/mapf/mapf_service/mapf_service/maps:/colcon_ws/src/mapf/mapf_service/mapf_service/maps
+    healthcheck:
+      # Check movement_request_server (FastAPI) - responds quickly and reliably
+      # mapf_solver only accepts POST requests and has no /health endpoint
+      test: ["CMD", "curl", "-sf", "http://localhost:${MOVEMENT_REQUEST_SERVER_PORT}/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+networks:
+  rmf2_broker_rmf-network:
+    external: true

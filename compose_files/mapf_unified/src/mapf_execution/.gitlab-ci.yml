@@ -1,0 +1,17 @@
+image: python:latest
+cache:
+  paths:
+    - .cache/pip
+before_script:
+  - python3 -V
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
+
+variables:  # Change pip's cache directory to be inside the project directory since we can only cache local items.
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+pytest:
+  script:
+    - python3 -m pytest

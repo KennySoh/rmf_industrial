@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.16)
+file(GLOB SRCS "./src/*.cpp")
+project(lib-mapf)
+add_library(lib-mapf STATIC ${SRCS})
+#add_definitions(-D_MAPDIR_="${CMAKE_CURRENT_LIST_DIR}/../map/")
+if( CPU STREQUAL "M1" )
+    message("Configuring grid-pathfinding for M1 Mac.")
+    target_compile_options(lib-mapf PUBLIC -O3 -Wall -mtune=native -mcpu=apple-m1)
+else()
+    target_compile_options(lib-mapf PUBLIC -O3 -Wall -mtune=native -march=native)
+endif()
+target_compile_features(lib-mapf PUBLIC cxx_std_17)
+
+# target_include_directories(lib-mapf INTERFACE ./include)
+
+target_include_directories(lib-mapf PUBLIC 
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+
+add_subdirectory(../third_party/grid-pathfinding/graph ./graph)
+target_link_libraries(lib-mapf lib-graph)

@@ -1,0 +1,50 @@
+version: '3'
+services:
+  vda5050_fiware:
+    container_name: vda5050_fiware
+    image: ${VDA5050_FIWARE_IMAGE}
+    env_file:
+      - .env
+    ports:
+      - "${VDA_FIWARE_MQTT_CLIENT_PORT}:${VDA_FIWARE_MQTT_CLIENT_PORT}"
+    expose:
+      - "${VDA_FIWARE_MQTT_CLIENT_PORT}"
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash 
+      && ros2 run vda5050_fiware scorpio ${MQTT_SERVER_HOST} ${VDA_FIWARE_MQTT_CLIENT_PORT} http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} http://${VDA_MASTER_HOST}:${VDA_MASTER_PORT} ${BUILDING_NAME}"
+    networks:
+      - fiware-net
+      - mosquitto-net
+  vda5050_mqtt:
+    container_name: vda5050_mqtt
+    image: ${VDA5050_MASTER_IMAGE}
+    env_file:
+      - .env
+    expose:
+      - "${VDA_MQTT_CLIENT_PORT}"
+    command: >
+      bash -c " source /vda5050_ws/install/setup.bash 
+      && ros2 launch vda5050_demo run_vda5050_mqtt.launch.py debug:=false master_url:=http://${VDA_MASTER_HOST}:${VDA_MASTER_PORT} url:=${MQTT_SERVER_HOST} mqtt_url:=http://${VDA_MQTT_HOST}:${VDA_MQTT_CLIENT_PORT}"
+    networks:
+      - fiware-net
+      - mosquitto-net
+  vda5050_master:
+    container_name: vda5050_master
+    image: ${VDA5050_MASTER_IMAGE}
+    env_file:
+      - .env
+    ports:
+      - "${VDA_MASTER_PORT}:${VDA_MASTER_PORT}"
+    expose:
+      - "${VDA_MASTER_PORT}"
+    command: >
+      bash -c " source /vda5050_ws/install/setup.bash
+      && ros2 launch vda5050_demo run_vda5050_master.launch.py debug:=false master_url:=http://${VDA_MASTER_HOST}:${VDA_MASTER_PORT} url:=${MQTT_SERVER_HOST} mqtt_url:=http://${VDA_MQTT_HOST}:${VDA_MQTT_CLIENT_PORT}"
+    networks:
+      - fiware-net
+      - mosquitto-net
+networks:
+  fiware-net:
+    external: true
+  mosquitto-net:
+    external: true

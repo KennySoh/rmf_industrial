@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    hostname: mosquitto
+    container_name: mosquitto
+    restart: unless-stopped
+    networks:
+      - rmf2_broker_rmf-network
+    volumes:
+      - ./mosquitto:/etc/mosquitto
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    ports:
+      - "1883:1883"
+      - "1884:1884"
+      - "1885:1885"
+      - "1886:1886"
+      - "1887:1887"
+      - "1888:1888"
+
+    expose:
+      - 1883
+      - 1884
+      - 1885
+      - 1886
+      - 1887
+      - 1888
+networks:
+  rmf2_broker_rmf-network:
+    external: true

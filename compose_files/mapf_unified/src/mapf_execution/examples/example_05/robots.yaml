@@ -1,0 +1,30 @@
+# Pybullet reads only the first `step_from` for each robot to determine where to spawn it.
+# If a building.yaml was provided to the simulation,
+# it reads `node`.
+# otherwise, it reads the x and y.
+
+plans:
+- agent_name: agent_0
+  steps:
+  - step_from:
+      node: P90
+    step_to:
+      node: 1,0
+    timestep: 0
+    task_id: "task0"
+- agent_name: agent_1
+  steps:
+  - step_from:
+      node: P91
+    step_to:
+      node: 2,0
+    timestep: 0
+    task_id: "task1"
+- agent_name: agent_2
+  steps:
+  - step_from:
+      node: P82
+    step_to:
+      node: P82
+    timestep: 0
+    task_id: "task1"

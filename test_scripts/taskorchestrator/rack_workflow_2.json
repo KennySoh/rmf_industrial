@@ -1,0 +1,3337 @@
+{
+  "$schema": "https://raw.githubusercontent.com/open-rmf/crossflow/refs/heads/main/diagram.schema.json",
+  "version": "0.1.0",
+  "templates": {},
+  "start": "wf2_p1_fork",
+  "ops": {
+    "wf2_p1_amr13_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR13->Rack13WP",
+      "next": "wf2_p1_amr13_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_13",
+        "coordinates": "P195",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_13_rack"
+      }
+    },
+    "wf2_p1_amr13_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr13_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_13_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "13",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr13_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr14_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR14->Rack14WP",
+      "next": "wf2_p1_amr14_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_14",
+        "coordinates": "P193",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_14_rack"
+      }
+    },
+    "wf2_p1_amr14_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr14_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_14_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "14",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr14_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr15_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR15->Rack15WP",
+      "next": "wf2_p1_amr15_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_15",
+        "coordinates": "P191",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_15_rack"
+      }
+    },
+    "wf2_p1_amr15_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr15_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_15_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "15",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr15_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr16_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR16->Rack16WP",
+      "next": "wf2_p1_amr16_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_16",
+        "coordinates": "P267",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_16_rack"
+      }
+    },
+    "wf2_p1_amr16_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr16_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_16_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "16",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr16_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr17_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR17->Rack17WP",
+      "next": "wf2_p1_amr17_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_17",
+        "coordinates": "P265",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_17_rack"
+      }
+    },
+    "wf2_p1_amr17_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr17_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_17_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "17",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr17_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr18_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR18->Rack18WP",
+      "next": "wf2_p1_amr18_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_18",
+        "coordinates": "P263",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_18_rack"
+      }
+    },
+    "wf2_p1_amr18_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr18_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_18_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "18",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr18_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr19_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR19->Rack19WP",
+      "next": "wf2_p1_amr19_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_19",
+        "coordinates": "P261",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_19_rack"
+      }
+    },
+    "wf2_p1_amr19_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr19_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_19_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "19",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr19_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr20_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR20->Rack20WP",
+      "next": "wf2_p1_amr20_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_20",
+        "coordinates": "P259",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_20_rack"
+      }
+    },
+    "wf2_p1_amr20_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr20_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_20_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "20",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr20_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr21_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR21->Rack21WP",
+      "next": "wf2_p1_amr21_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_21",
+        "coordinates": "P335",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_21_rack"
+      }
+    },
+    "wf2_p1_amr21_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr21_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_21_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "21",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr21_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr22_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR22->Rack22WP",
+      "next": "wf2_p1_amr22_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_22",
+        "coordinates": "P333",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_22_rack"
+      }
+    },
+    "wf2_p1_amr22_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr22_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_22_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "22",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr22_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr23_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR23->Rack23WP",
+      "next": "wf2_p1_amr23_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_23",
+        "coordinates": "P331",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_23_rack"
+      }
+    },
+    "wf2_p1_amr23_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr23_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_23_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "23",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr23_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_amr24_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR24->Rack24WP",
+      "next": "wf2_p1_amr24_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_24",
+        "coordinates": "P329",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_24_rack"
+      }
+    },
+    "wf2_p1_amr24_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr24_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_24_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "24",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr24_buf": {
+      "type": "buffer"
+    },
+    "wf2_p1_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_p1_amr13_to_rack",
+        "wf2_p1_amr14_to_rack",
+        "wf2_p1_amr15_to_rack",
+        "wf2_p1_amr16_to_rack",
+        "wf2_p1_amr17_to_rack",
+        "wf2_p1_amr18_to_rack",
+        "wf2_p1_amr19_to_rack",
+        "wf2_p1_amr20_to_rack",
+        "wf2_p1_amr21_to_rack",
+        "wf2_p1_amr22_to_rack",
+        "wf2_p1_amr23_to_rack",
+        "wf2_p1_amr24_to_rack",
+        "wf2_p1_amr25_to_rack"
+      ]
+    },
+    "wf2_r1_amr13_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR13->Manip",
+      "next": "wf2_r1_amr13_depal1",
+      "config": {
+        "asset_name": "Manufacturer_13",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r1_manip"
+      }
+    },
+    "wf2_r1_amr13_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r1_amr13_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r1_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r1_amr13_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r1_amr13_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r1_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r1_amr13_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r1_amr13_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r1_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r1_amr13_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r1_amr13_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r1_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r1_amr13_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR13->Conveyor",
+      "next": "wf2_r1_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_13",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r1_conveyor"
+      }
+    },
+    "wf2_r1_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_r1_amr14_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR14->HoldingPoint1",
+      "next": "wf2_r1_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_14",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r1_hold1"
+      }
+    },
+    "wf2_r1_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r1_amr15_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR15->HoldingPoint2",
+      "next": "wf2_r1_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_15",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r1_hold2"
+      }
+    },
+    "wf2_r1_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r1_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r1_amr13_to_manip",
+        "wf2_r1_amr14_to_hold1",
+        "wf2_r1_amr15_to_hold2"
+      ]
+    },
+    "wf2_r1_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r1_active_buf",
+        "wf2_r1_hold1_buf",
+        "wf2_r1_hold2_buf"
+      ],
+      "next": "wf2_r2_fork"
+    },
+    "wf2_r2_amr14_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR14->Manip",
+      "next": "wf2_r2_amr14_depal1",
+      "config": {
+        "asset_name": "Manufacturer_14",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r2_manip"
+      }
+    },
+    "wf2_r2_amr14_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r2_amr14_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r2_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r2_amr14_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r2_amr14_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r2_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r2_amr14_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r2_amr14_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r2_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r2_amr14_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r2_amr14_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r2_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r2_amr14_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR14->Conveyor",
+      "next": "wf2_r2_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_14",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r2_conveyor"
+      }
+    },
+    "wf2_r2_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr13_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr13_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit13_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr13_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr13_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit13_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr13_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr13_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit13_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr13_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr13_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit13_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr13_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR13->Rack13WP",
+      "next": "wf2_exit_amr13_droprack",
+      "config": {
+        "asset_name": "Manufacturer_13",
+        "coordinates": "P195",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit13_rack"
+      }
+    },
+    "wf2_exit_amr13_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr13_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit13_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "13",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr13_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR13->OriginalWP",
+      "next": "wf2_exit_amr13_buf",
+      "config": {
+        "asset_name": "Manufacturer_13",
+        "coordinates": "P214",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit13_origin"
+      }
+    },
+    "wf2_exit_amr13_buf": {
+      "type": "buffer"
+    },
+    "wf2_r2_amr15_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR15->HoldingPoint1",
+      "next": "wf2_r2_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_15",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r2_hold1"
+      }
+    },
+    "wf2_r2_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r2_amr16_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR16->HoldingPoint2",
+      "next": "wf2_r2_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_16",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r2_hold2"
+      }
+    },
+    "wf2_r2_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r2_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r2_amr14_to_manip",
+        "wf2_exit_amr13_dropoff1",
+        "wf2_r2_amr15_to_hold1",
+        "wf2_r2_amr16_to_hold2"
+      ]
+    },
+    "wf2_r2_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r2_active_buf",
+        "wf2_r2_hold1_buf",
+        "wf2_r2_hold2_buf"
+      ],
+      "next": "wf2_r3_fork"
+    },
+    "wf2_r3_amr15_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR15->Manip",
+      "next": "wf2_r3_amr15_depal1",
+      "config": {
+        "asset_name": "Manufacturer_15",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r3_manip"
+      }
+    },
+    "wf2_r3_amr15_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r3_amr15_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r3_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r3_amr15_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r3_amr15_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r3_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r3_amr15_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r3_amr15_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r3_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r3_amr15_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r3_amr15_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r3_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r3_amr15_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR15->Conveyor",
+      "next": "wf2_r3_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_15",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r3_conveyor"
+      }
+    },
+    "wf2_r3_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr14_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr14_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit14_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr14_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr14_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit14_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr14_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr14_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit14_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr14_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr14_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit14_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr14_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR14->Rack14WP",
+      "next": "wf2_exit_amr14_droprack",
+      "config": {
+        "asset_name": "Manufacturer_14",
+        "coordinates": "P193",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit14_rack"
+      }
+    },
+    "wf2_exit_amr14_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr14_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit14_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "14",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr14_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR14->OriginalWP",
+      "next": "wf2_exit_amr14_buf",
+      "config": {
+        "asset_name": "Manufacturer_14",
+        "coordinates": "P212",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit14_origin"
+      }
+    },
+    "wf2_exit_amr14_buf": {
+      "type": "buffer"
+    },
+    "wf2_r3_amr16_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR16->HoldingPoint1",
+      "next": "wf2_r3_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_16",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r3_hold1"
+      }
+    },
+    "wf2_r3_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r3_amr17_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR17->HoldingPoint2",
+      "next": "wf2_r3_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_17",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r3_hold2"
+      }
+    },
+    "wf2_r3_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r3_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r3_amr15_to_manip",
+        "wf2_exit_amr14_dropoff1",
+        "wf2_r3_amr16_to_hold1",
+        "wf2_r3_amr17_to_hold2"
+      ]
+    },
+    "wf2_r3_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r3_active_buf",
+        "wf2_r3_hold1_buf",
+        "wf2_r3_hold2_buf"
+      ],
+      "next": "wf2_r4_fork"
+    },
+    "wf2_r4_amr16_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR16->Manip",
+      "next": "wf2_r4_amr16_depal1",
+      "config": {
+        "asset_name": "Manufacturer_16",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r4_manip"
+      }
+    },
+    "wf2_r4_amr16_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r4_amr16_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r4_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r4_amr16_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r4_amr16_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r4_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r4_amr16_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r4_amr16_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r4_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r4_amr16_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r4_amr16_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r4_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r4_amr16_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR16->Conveyor",
+      "next": "wf2_r4_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_16",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r4_conveyor"
+      }
+    },
+    "wf2_r4_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr15_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr15_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit15_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr15_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr15_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit15_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr15_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr15_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit15_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr15_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr15_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit15_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr15_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR15->Rack15WP",
+      "next": "wf2_exit_amr15_droprack",
+      "config": {
+        "asset_name": "Manufacturer_15",
+        "coordinates": "P191",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit15_rack"
+      }
+    },
+    "wf2_exit_amr15_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr15_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit15_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "15",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr15_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR15->OriginalWP",
+      "next": "wf2_exit_amr15_buf",
+      "config": {
+        "asset_name": "Manufacturer_15",
+        "coordinates": "P210",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit15_origin"
+      }
+    },
+    "wf2_exit_amr15_buf": {
+      "type": "buffer"
+    },
+    "wf2_r4_amr17_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR17->HoldingPoint1",
+      "next": "wf2_r4_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_17",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r4_hold1"
+      }
+    },
+    "wf2_r4_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r4_amr18_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR18->HoldingPoint2",
+      "next": "wf2_r4_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_18",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r4_hold2"
+      }
+    },
+    "wf2_r4_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r4_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r4_amr16_to_manip",
+        "wf2_exit_amr15_dropoff1",
+        "wf2_r4_amr17_to_hold1",
+        "wf2_r4_amr18_to_hold2"
+      ]
+    },
+    "wf2_r4_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r4_active_buf",
+        "wf2_r4_hold1_buf",
+        "wf2_r4_hold2_buf"
+      ],
+      "next": "wf2_r5_fork"
+    },
+    "wf2_r5_amr17_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR17->Manip",
+      "next": "wf2_r5_amr17_depal1",
+      "config": {
+        "asset_name": "Manufacturer_17",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r5_manip"
+      }
+    },
+    "wf2_r5_amr17_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r5_amr17_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r5_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r5_amr17_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r5_amr17_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r5_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r5_amr17_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r5_amr17_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r5_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r5_amr17_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r5_amr17_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r5_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r5_amr17_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR17->Conveyor",
+      "next": "wf2_r5_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_17",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r5_conveyor"
+      }
+    },
+    "wf2_r5_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr16_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr16_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit16_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr16_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr16_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit16_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr16_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr16_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit16_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr16_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr16_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit16_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr16_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR16->Rack16WP",
+      "next": "wf2_exit_amr16_droprack",
+      "config": {
+        "asset_name": "Manufacturer_16",
+        "coordinates": "P267",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit16_rack"
+      }
+    },
+    "wf2_exit_amr16_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr16_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit16_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "16",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr16_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR16->OriginalWP",
+      "next": "wf2_exit_amr16_buf",
+      "config": {
+        "asset_name": "Manufacturer_16",
+        "coordinates": "P286",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit16_origin"
+      }
+    },
+    "wf2_exit_amr16_buf": {
+      "type": "buffer"
+    },
+    "wf2_r5_amr18_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR18->HoldingPoint1",
+      "next": "wf2_r5_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_18",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r5_hold1"
+      }
+    },
+    "wf2_r5_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r5_amr19_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR19->HoldingPoint2",
+      "next": "wf2_r5_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_19",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r5_hold2"
+      }
+    },
+    "wf2_r5_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r5_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r5_amr17_to_manip",
+        "wf2_exit_amr16_dropoff1",
+        "wf2_r5_amr18_to_hold1",
+        "wf2_r5_amr19_to_hold2"
+      ]
+    },
+    "wf2_r5_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r5_active_buf",
+        "wf2_r5_hold1_buf",
+        "wf2_r5_hold2_buf"
+      ],
+      "next": "wf2_r6_fork"
+    },
+    "wf2_r6_amr18_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR18->Manip",
+      "next": "wf2_r6_amr18_depal1",
+      "config": {
+        "asset_name": "Manufacturer_18",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r6_manip"
+      }
+    },
+    "wf2_r6_amr18_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r6_amr18_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r6_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r6_amr18_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r6_amr18_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r6_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r6_amr18_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r6_amr18_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r6_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r6_amr18_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r6_amr18_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r6_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r6_amr18_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR18->Conveyor",
+      "next": "wf2_r6_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_18",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r6_conveyor"
+      }
+    },
+    "wf2_r6_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr17_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr17_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit17_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr17_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr17_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit17_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr17_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr17_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit17_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr17_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr17_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit17_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr17_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR17->Rack17WP",
+      "next": "wf2_exit_amr17_droprack",
+      "config": {
+        "asset_name": "Manufacturer_17",
+        "coordinates": "P265",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit17_rack"
+      }
+    },
+    "wf2_exit_amr17_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr17_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit17_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "17",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr17_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR17->OriginalWP",
+      "next": "wf2_exit_amr17_buf",
+      "config": {
+        "asset_name": "Manufacturer_17",
+        "coordinates": "P284",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit17_origin"
+      }
+    },
+    "wf2_exit_amr17_buf": {
+      "type": "buffer"
+    },
+    "wf2_r6_amr19_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR19->HoldingPoint1",
+      "next": "wf2_r6_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_19",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r6_hold1"
+      }
+    },
+    "wf2_r6_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r6_amr20_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR20->HoldingPoint2",
+      "next": "wf2_r6_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_20",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r6_hold2"
+      }
+    },
+    "wf2_r6_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r6_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r6_amr18_to_manip",
+        "wf2_exit_amr17_dropoff1",
+        "wf2_r6_amr19_to_hold1",
+        "wf2_r6_amr20_to_hold2"
+      ]
+    },
+    "wf2_r6_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r6_active_buf",
+        "wf2_r6_hold1_buf",
+        "wf2_r6_hold2_buf"
+      ],
+      "next": "wf2_r7_fork"
+    },
+    "wf2_r7_amr19_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR19->Manip",
+      "next": "wf2_r7_amr19_depal1",
+      "config": {
+        "asset_name": "Manufacturer_19",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r7_manip"
+      }
+    },
+    "wf2_r7_amr19_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r7_amr19_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r7_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r7_amr19_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r7_amr19_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r7_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r7_amr19_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r7_amr19_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r7_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r7_amr19_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r7_amr19_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r7_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r7_amr19_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR19->Conveyor",
+      "next": "wf2_r7_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_19",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r7_conveyor"
+      }
+    },
+    "wf2_r7_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr18_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr18_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit18_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr18_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr18_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit18_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr18_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr18_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit18_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr18_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr18_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit18_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr18_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR18->Rack18WP",
+      "next": "wf2_exit_amr18_droprack",
+      "config": {
+        "asset_name": "Manufacturer_18",
+        "coordinates": "P263",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit18_rack"
+      }
+    },
+    "wf2_exit_amr18_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr18_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit18_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "18",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr18_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR18->OriginalWP",
+      "next": "wf2_exit_amr18_buf",
+      "config": {
+        "asset_name": "Manufacturer_18",
+        "coordinates": "P282",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit18_origin"
+      }
+    },
+    "wf2_exit_amr18_buf": {
+      "type": "buffer"
+    },
+    "wf2_r7_amr20_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR20->HoldingPoint1",
+      "next": "wf2_r7_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_20",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r7_hold1"
+      }
+    },
+    "wf2_r7_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r7_amr21_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR21->HoldingPoint2",
+      "next": "wf2_r7_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_21",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r7_hold2"
+      }
+    },
+    "wf2_r7_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r7_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r7_amr19_to_manip",
+        "wf2_exit_amr18_dropoff1",
+        "wf2_r7_amr20_to_hold1",
+        "wf2_r7_amr21_to_hold2"
+      ]
+    },
+    "wf2_r7_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r7_active_buf",
+        "wf2_r7_hold1_buf",
+        "wf2_r7_hold2_buf"
+      ],
+      "next": "wf2_r8_fork"
+    },
+    "wf2_r8_amr20_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR20->Manip",
+      "next": "wf2_r8_amr20_depal1",
+      "config": {
+        "asset_name": "Manufacturer_20",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r8_manip"
+      }
+    },
+    "wf2_r8_amr20_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r8_amr20_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r8_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r8_amr20_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r8_amr20_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r8_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r8_amr20_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r8_amr20_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r8_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r8_amr20_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r8_amr20_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r8_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r8_amr20_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR20->Conveyor",
+      "next": "wf2_r8_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_20",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r8_conveyor"
+      }
+    },
+    "wf2_r8_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr19_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr19_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit19_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr19_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr19_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit19_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr19_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr19_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit19_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr19_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr19_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit19_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr19_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR19->Rack19WP",
+      "next": "wf2_exit_amr19_droprack",
+      "config": {
+        "asset_name": "Manufacturer_19",
+        "coordinates": "P261",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit19_rack"
+      }
+    },
+    "wf2_exit_amr19_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr19_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit19_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "19",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr19_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR19->OriginalWP",
+      "next": "wf2_exit_amr19_buf",
+      "config": {
+        "asset_name": "Manufacturer_19",
+        "coordinates": "P280",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit19_origin"
+      }
+    },
+    "wf2_exit_amr19_buf": {
+      "type": "buffer"
+    },
+    "wf2_r8_amr21_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR21->HoldingPoint1",
+      "next": "wf2_r8_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_21",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r8_hold1"
+      }
+    },
+    "wf2_r8_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r8_amr22_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR22->HoldingPoint2",
+      "next": "wf2_r8_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_22",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r8_hold2"
+      }
+    },
+    "wf2_r8_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r8_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r8_amr20_to_manip",
+        "wf2_exit_amr19_dropoff1",
+        "wf2_r8_amr21_to_hold1",
+        "wf2_r8_amr22_to_hold2"
+      ]
+    },
+    "wf2_r8_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r8_active_buf",
+        "wf2_r8_hold1_buf",
+        "wf2_r8_hold2_buf"
+      ],
+      "next": "wf2_r9_fork"
+    },
+    "wf2_r9_amr21_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR21->Manip",
+      "next": "wf2_r9_amr21_depal1",
+      "config": {
+        "asset_name": "Manufacturer_21",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r9_manip"
+      }
+    },
+    "wf2_r9_amr21_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r9_amr21_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r9_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r9_amr21_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r9_amr21_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r9_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r9_amr21_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r9_amr21_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r9_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r9_amr21_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r9_amr21_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r9_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r9_amr21_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR21->Conveyor",
+      "next": "wf2_r9_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_21",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r9_conveyor"
+      }
+    },
+    "wf2_r9_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr20_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr20_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit20_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr20_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr20_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit20_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr20_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr20_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit20_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr20_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr20_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit20_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr20_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR20->Rack20WP",
+      "next": "wf2_exit_amr20_droprack",
+      "config": {
+        "asset_name": "Manufacturer_20",
+        "coordinates": "P259",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit20_rack"
+      }
+    },
+    "wf2_exit_amr20_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr20_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit20_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "20",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr20_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR20->OriginalWP",
+      "next": "wf2_exit_amr20_buf",
+      "config": {
+        "asset_name": "Manufacturer_20",
+        "coordinates": "P278",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit20_origin"
+      }
+    },
+    "wf2_exit_amr20_buf": {
+      "type": "buffer"
+    },
+    "wf2_r9_amr22_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR22->HoldingPoint1",
+      "next": "wf2_r9_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_22",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r9_hold1"
+      }
+    },
+    "wf2_r9_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r9_amr23_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR23->HoldingPoint2",
+      "next": "wf2_r9_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_23",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r9_hold2"
+      }
+    },
+    "wf2_r9_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r9_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r9_amr21_to_manip",
+        "wf2_exit_amr20_dropoff1",
+        "wf2_r9_amr22_to_hold1",
+        "wf2_r9_amr23_to_hold2"
+      ]
+    },
+    "wf2_r9_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r9_active_buf",
+        "wf2_r9_hold1_buf",
+        "wf2_r9_hold2_buf"
+      ],
+      "next": "wf2_r10_fork"
+    },
+    "wf2_r10_amr22_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR22->Manip",
+      "next": "wf2_r10_amr22_depal1",
+      "config": {
+        "asset_name": "Manufacturer_22",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r10_manip"
+      }
+    },
+    "wf2_r10_amr22_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r10_amr22_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r10_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r10_amr22_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r10_amr22_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r10_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r10_amr22_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r10_amr22_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r10_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r10_amr22_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r10_amr22_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r10_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r10_amr22_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR22->Conveyor",
+      "next": "wf2_r10_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_22",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r10_conveyor"
+      }
+    },
+    "wf2_r10_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr21_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr21_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit21_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr21_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr21_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit21_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr21_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr21_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit21_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr21_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr21_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit21_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr21_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR21->Rack21WP",
+      "next": "wf2_exit_amr21_droprack",
+      "config": {
+        "asset_name": "Manufacturer_21",
+        "coordinates": "P335",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit21_rack"
+      }
+    },
+    "wf2_exit_amr21_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr21_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit21_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "21",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr21_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR21->OriginalWP",
+      "next": "wf2_exit_amr21_buf",
+      "config": {
+        "asset_name": "Manufacturer_21",
+        "coordinates": "P354",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit21_origin"
+      }
+    },
+    "wf2_exit_amr21_buf": {
+      "type": "buffer"
+    },
+    "wf2_r10_amr23_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR23->HoldingPoint1",
+      "next": "wf2_r10_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_23",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r10_hold1"
+      }
+    },
+    "wf2_r10_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r10_amr24_to_hold2": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR24->HoldingPoint2",
+      "next": "wf2_r10_hold2_buf",
+      "config": {
+        "asset_name": "Manufacturer_24",
+        "coordinates": "P422",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r10_hold2"
+      }
+    },
+    "wf2_r10_hold2_buf": {
+      "type": "buffer"
+    },
+    "wf2_r10_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r10_amr22_to_manip",
+        "wf2_exit_amr21_dropoff1",
+        "wf2_r10_amr23_to_hold1",
+        "wf2_r10_amr24_to_hold2"
+      ]
+    },
+    "wf2_r10_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r10_active_buf",
+        "wf2_r10_hold1_buf",
+        "wf2_r10_hold2_buf"
+      ],
+      "next": "wf2_r11_fork"
+    },
+    "wf2_r11_amr23_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR23->Manip",
+      "next": "wf2_r11_amr23_depal1",
+      "config": {
+        "asset_name": "Manufacturer_23",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r11_manip"
+      }
+    },
+    "wf2_r11_amr23_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r11_amr23_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r11_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r11_amr23_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r11_amr23_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r11_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r11_amr23_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r11_amr23_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r11_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r11_amr23_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r11_amr23_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r11_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r11_amr23_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR23->Conveyor",
+      "next": "wf2_r11_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_23",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r11_conveyor"
+      }
+    },
+    "wf2_r11_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr22_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr22_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit22_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr22_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr22_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit22_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr22_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr22_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit22_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr22_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr22_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit22_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr22_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR22->Rack22WP",
+      "next": "wf2_exit_amr22_droprack",
+      "config": {
+        "asset_name": "Manufacturer_22",
+        "coordinates": "P333",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit22_rack"
+      }
+    },
+    "wf2_exit_amr22_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr22_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit22_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "22",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr22_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR22->OriginalWP",
+      "next": "wf2_exit_amr22_buf",
+      "config": {
+        "asset_name": "Manufacturer_22",
+        "coordinates": "P352",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit22_origin"
+      }
+    },
+    "wf2_exit_amr22_buf": {
+      "type": "buffer"
+    },
+    "wf2_r11_amr24_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR24->HoldingPoint1",
+      "next": "wf2_r11_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_24",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r11_hold1"
+      }
+    },
+    "wf2_r11_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r11_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r11_amr23_to_manip",
+        "wf2_exit_amr22_dropoff1",
+        "wf2_r11_amr24_to_hold1"
+      ]
+    },
+    "wf2_r11_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r11_active_buf",
+        "wf2_r11_hold1_buf"
+      ],
+      "next": "wf2_r12_fork"
+    },
+    "wf2_r12_amr24_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR24->Manip",
+      "next": "wf2_r12_amr24_depal1",
+      "config": {
+        "asset_name": "Manufacturer_24",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r12_manip"
+      }
+    },
+    "wf2_r12_amr24_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r12_amr24_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r12_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r12_amr24_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r12_amr24_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r12_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r12_amr24_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r12_amr24_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r12_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r12_amr24_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r12_amr24_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r12_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r12_amr24_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR24->Conveyor",
+      "next": "wf2_r12_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_24",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r12_conveyor"
+      }
+    },
+    "wf2_r12_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_exit_amr23_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr23_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit23_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr23_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr23_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit23_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr23_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr23_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit23_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr23_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr23_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit23_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr23_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR23->Rack23WP",
+      "next": "wf2_exit_amr23_droprack",
+      "config": {
+        "asset_name": "Manufacturer_23",
+        "coordinates": "P331",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit23_rack"
+      }
+    },
+    "wf2_exit_amr23_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr23_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit23_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "23",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr23_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR23->OriginalWP",
+      "next": "wf2_exit_amr23_buf",
+      "config": {
+        "asset_name": "Manufacturer_23",
+        "coordinates": "P350",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit23_origin"
+      }
+    },
+    "wf2_exit_amr23_buf": {
+      "type": "buffer"
+    },
+    "wf2_r12_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r12_amr24_to_manip",
+        "wf2_exit_amr23_dropoff1",
+        "wf2_r12_amr25_to_hold1"
+      ]
+    },
+    "wf2_exit_amr24_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr24_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit24_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr24_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr24_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit24_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr24_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr24_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit24_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr24_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr24_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit24_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr24_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR24->Rack24WP",
+      "next": "wf2_exit_amr24_droprack",
+      "config": {
+        "asset_name": "Manufacturer_24",
+        "coordinates": "P329",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit24_rack"
+      }
+    },
+    "wf2_exit_amr24_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr24_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit24_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "24",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr24_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR24->OriginalWP",
+      "next": "wf2_exit_amr24_buf",
+      "config": {
+        "asset_name": "Manufacturer_24",
+        "coordinates": "P348",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit24_origin"
+      }
+    },
+    "wf2_exit_amr24_buf": {
+      "type": "buffer"
+    },
+    "wf2_r12_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r12_active_buf",
+        "wf2_r12_hold1_buf"
+      ],
+      "next": "wf2_r13_fork"
+    },
+    "wf2_p1_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_p1_amr13_buf",
+        "wf2_p1_amr14_buf",
+        "wf2_p1_amr15_buf",
+        "wf2_p1_amr16_buf",
+        "wf2_p1_amr17_buf",
+        "wf2_p1_amr18_buf",
+        "wf2_p1_amr19_buf",
+        "wf2_p1_amr20_buf",
+        "wf2_p1_amr21_buf",
+        "wf2_p1_amr22_buf",
+        "wf2_p1_amr23_buf",
+        "wf2_p1_amr24_buf"
+      ],
+      "next": "wf2_r1_fork"
+    },
+    "wf2_terminate_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_exit_amr13_buf",
+        "wf2_exit_amr14_buf",
+        "wf2_exit_amr15_buf",
+        "wf2_exit_amr16_buf",
+        "wf2_exit_amr17_buf",
+        "wf2_exit_amr18_buf",
+        "wf2_exit_amr19_buf",
+        "wf2_exit_amr20_buf",
+        "wf2_exit_amr21_buf",
+        "wf2_exit_amr22_buf",
+        "wf2_exit_amr23_buf",
+        "wf2_exit_amr24_buf"
+      ],
+      "next": {
+        "builtin": "terminate"
+      }
+    },
+    "wf2_p1_amr25_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR25->Rack25WP",
+      "next": "wf2_p1_amr25_liftrack",
+      "config": {
+        "asset_name": "Manufacturer_25",
+        "coordinates": "P327",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_p1_25_rack"
+      }
+    },
+    "wf2_p1_amr25_liftrack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "LiftRack",
+      "next": "wf2_p1_amr25_buf",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_p1_25_liftrack",
+        "task_type": "liftrack",
+        "task_command": "START",
+        "asset_id": "25",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_p1_amr25_buf": {
+      "type": "buffer"
+    },
+    "wf2_r12_amr25_to_hold1": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR25->HoldingPoint1",
+      "next": "wf2_r12_hold1_buf",
+      "config": {
+        "asset_name": "Manufacturer_25",
+        "coordinates": "P424",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r12_hold1"
+      }
+    },
+    "wf2_r12_hold1_buf": {
+      "type": "buffer"
+    },
+    "wf2_r13_amr25_to_manip": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR25->Manip",
+      "next": "wf2_r13_amr25_depal1",
+      "config": {
+        "asset_name": "Manufacturer_25",
+        "coordinates": "P492",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r13_manip"
+      }
+    },
+    "wf2_r13_amr25_depal1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 1/4",
+      "next": "wf2_r13_amr25_depal2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r13_depal1",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r13_amr25_depal2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 2/4",
+      "next": "wf2_r13_amr25_depal3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r13_depal2",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r13_amr25_depal3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 3/4",
+      "next": "wf2_r13_amr25_depal4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r13_depal3",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r13_amr25_depal4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Depalletize 4/4",
+      "next": "wf2_r13_amr25_to_conveyor",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_r13_depal4",
+        "task_type": "depalletize",
+        "task_command": "START",
+        "asset_id": "ManipulatorRobot2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_r13_amr25_to_conveyor": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR25->Conveyor",
+      "next": "wf2_r13_active_buf",
+      "config": {
+        "asset_name": "Manufacturer_25",
+        "coordinates": "P617",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_r13_conveyor"
+      }
+    },
+    "wf2_r13_active_buf": {
+      "type": "buffer"
+    },
+    "wf2_r13_fork": {
+      "type": "fork_clone",
+      "next": [
+        "wf2_r13_amr25_to_manip",
+        "wf2_exit_amr24_dropoff1"
+      ]
+    },
+    "wf2_r13_join": {
+      "type": "join",
+      "buffers": [
+        "wf2_r13_active_buf"
+      ],
+      "next": "wf2_exit_amr25_dropoff1"
+    },
+    "wf2_exit_amr25_dropoff1": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 1/4",
+      "next": "wf2_exit_amr25_dropoff2",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit25_dropoff1",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr25_dropoff2": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 2/4",
+      "next": "wf2_exit_amr25_dropoff3",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit25_dropoff2",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr25_dropoff3": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 3/4",
+      "next": "wf2_exit_amr25_dropoff4",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit25_dropoff3",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr25_dropoff4": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "Dropoff 4/4",
+      "next": "wf2_exit_amr25_to_rack",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit25_dropoff4",
+        "task_type": "dropoff",
+        "task_command": "START",
+        "asset_id": "Conveyor2",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr25_to_rack": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR25->Rack25WP",
+      "next": "wf2_exit_amr25_droprack",
+      "config": {
+        "asset_name": "Manufacturer_25",
+        "coordinates": "P327",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit25_rack"
+      }
+    },
+    "wf2_exit_amr25_droprack": {
+      "type": "node",
+      "builder": "TransferNode",
+      "display_text": "DropRack",
+      "next": "wf2_exit_amr25_to_origin",
+      "config": {
+        "id": "urn:ngsild:Task:wf2_exit25_droprack",
+        "task_type": "droprack",
+        "task_command": "START",
+        "asset_id": "25",
+        "task_params": {},
+        "max_retries": 3
+      }
+    },
+    "wf2_exit_amr25_to_origin": {
+      "type": "node",
+      "builder": "MapfReplaceNode",
+      "display_text": "AMR25->OriginalWP",
+      "next": "wf2_exit_amr25_buf",
+      "config": {
+        "asset_name": "Manufacturer_25",
+        "coordinates": "P346",
+        "task_type": "mapf_replace",
+        "task_id": "wf2_exit25_origin"
+      }
+    },
+    "wf2_exit_amr25_buf": {
+      "type": "buffer"
+    }
+  },
+  "description": "wf2: 12 robots rack-pickup (parallel) then rolling manipulator pipeline (1 active + 2 holding) draining to a single terminate join."
+}

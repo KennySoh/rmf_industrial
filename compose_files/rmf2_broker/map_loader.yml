@@ -1,0 +1,31 @@
+version: '3'
+services:
+  map_fiware:
+    container_name: fiware_map
+    image: ${FIWARE_MAP_SERVER_IMAGE}
+    env_file:
+      - .env
+    ports:
+      - "${MAP_SERVER_PORT}:${MAP_SERVER_PORT}"
+    expose:
+      - "${MAP_SERVER_PORT}"
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash
+      && ros2 run fiware_map fiware_map_server http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} ${ALL_IPS} ${MAP_SERVER_PORT}"
+    networks:
+      - rmf2_broker_rmf-network
+  load_map:
+    container_name: load_map
+    image: ${FIWARE_MAP_SERVER_IMAGE}
+    env_file:
+      - .env
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash
+      && ros2 run fiware_map load_maps http://${MAP_SERVER_HOST}:${MAP_SERVER_PORT} ${BUILDING_NAME}"
+    networks:
+      - rmf2_broker_rmf-network
+    depends_on:
+      - map_fiware
+networks:
+  rmf2_broker_rmf-network:
+    external: true

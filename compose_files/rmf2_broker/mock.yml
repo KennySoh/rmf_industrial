@@ -1,0 +1,10 @@
+services:
+  vda5050_mock_adapter:
+    env_file:
+      - .env
+    image: ${MOCK_AGV_IMAGE}
+    network_mode: host
+    volumes:
+      - ${MOCK_AGV_CONFIG:?}:/root/agv_config.yaml
+    command: >
+      bash -c "ros2 launch vda5050_bringup_mock agv_waypoint_client_mock.launch.py config:='/root/agv_config.yaml'"

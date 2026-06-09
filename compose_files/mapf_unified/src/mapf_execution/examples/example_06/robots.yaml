@@ -1,0 +1,62 @@
+# Pybullet reads only the x and y of step_from for each robot.
+plans:
+- agent_name: agent_0
+  steps:
+  - step_from:
+      node: 0,0
+      x: 0.0
+      y: 0.0
+    step_to:
+      node: 1,0
+      x: 1.0
+      y: 0.0
+    timestep: 0
+    task_id: "task0"
+- agent_name: agent_1
+  steps:
+  - step_from:
+      node: 1,0
+      x: 1.0
+      y: 0.0
+    step_to:
+      node: 2,0
+      x: 2.0
+      y: 0.0
+    timestep: 0
+    task_id: "task1"
+- agent_name: agent_3
+  steps:
+  - step_from:
+      node: 2,1
+      x: 2.0
+      y: 1.0
+    step_to:
+      node: 4,1
+      x: 4.0
+      y: 1.0
+    timestep: 0
+    task_id: "task3"
+- agent_name: agent_22
+  steps:
+  - step_from:
+      node: 0,2
+      x: 0.0
+      y: 2.0
+    step_to:
+      node: 1,1
+      x: 1.0
+      y: 1.0
+    timestep: 0
+    task_id: "task22"
+- agent_name: agent_23
+  steps:
+  - step_from:
+      node: 0,3
+      x: 0.0
+      y: 3.0
+    step_to:
+      node: 1,1
+      x: 1.0
+      y: 1.0
+    timestep: 0
+    task_id: "task23"

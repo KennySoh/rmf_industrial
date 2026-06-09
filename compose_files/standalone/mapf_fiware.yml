@@ -1,0 +1,108 @@
+version: '3'
+services:
+  map_fiware:
+    container_name: fiware_map
+    image: ${FIWARE_MAP_SERVER_IMAGE}
+    env_file:
+      - .env
+    ports:
+      - "${MAP_SERVER_PORT}:${MAP_SERVER_PORT}"
+    expose:
+      - "${MAP_SERVER_PORT}"
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash 
+      && ros2 run fiware_map fiware_map_server http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} ${ALL_IPS} ${MAP_SERVER_PORT}"
+    networks:
+      - fiware-net
+  load_map:
+    container_name: load_map
+    image: ${FIWARE_MAP_SERVER_IMAGE}
+    env_file:
+      - .env
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash 
+      && ros2 run fiware_map load_maps http://${MAP_SERVER_HOST}:${MAP_SERVER_PORT} rmf1"
+    networks:
+      - fiware-net
+    depends_on:
+      - map_fiware
+  mapf_fiware:
+    container_name: fiware_mapf
+    image: ${FIWARE_MAPF_SERVER_IMAGE}
+    depends_on:
+      - load_map
+    env_file:
+      - .env
+    ports:
+      - "${MAPF_MQTT_CLIENT_PORT}:${MAPF_MQTT_CLIENT_PORT}"
+      - "${MAPF_SERVER_PORT}:${MAPF_SERVER_PORT}"
+    expose:
+      - "${MAPF_MQTT_CLIENT_PORT}"
+      - "${MAPF_SERVER_PORT}"
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash 
+      && ros2 run mapf_fiware mapf_fiware http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} ${ALL_IPS} ${MAPF_SERVER_PORT} ${MQTT_SERVER_HOST} ${MAPF_MQTT_CLIENT_PORT} ${VALKEY_HOST} ${VALKEY_PORT} ${BUILDING_NAME}"
+    networks:
+      - fiware-net
+      - valkey-net
+      - mosquitto-net
+  mapf_solver:
+    container_name: mapf_solver
+    depends_on:
+      - load_map
+    image: ${MAPF_SOLVER_SERVER_IMAGE}
+    env_file:
+      - .env
+    command: >
+      bash -c "source /colcon_ws/install/setup.bash && ros2 run mapf run_mapf_service mapf_solver ${MAPF_SOLVER_SERVER_PORT}"
+    networks:
+      - mapf-net
+    ports:
+      - "${MAPF_SOLVER_SERVER_PORT}:${MAPF_SOLVER_SERVER_PORT}"
+    expose:
+      - "${MAPF_SOLVER_SERVER_PORT}"
+  adg_executor:
+    container_name: adg_executor
+    depends_on:
+      - load_map
+    image: ${MAPF_EXECUTION_IMAGE}
+    # build: /home/rosi/workspaces/test_ws/src/mapf_execution/mapf_execution/.
+    env_file:
+      - .env
+    command: >
+      bash -c "cd /mapf_execution &&
+      python3 -u -m adg_executor.main --valkey_host ${VALKEY_HOST} --valkey_port ${VALKEY_PORT} --vda_url http://${MAPF_SERVER_HOST}:${MAPF_SERVER_PORT} --solver_url http://${MAPF_SOLVER_SERVER_HOST}:${MAPF_SOLVER_SERVER_PORT} --context_broker_url http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} --map_name ${BUILDING_NAME} --agent ${AGENT_NAME}"
+    networks:
+      - valkey-net
+      - fiware-net
+      - mapf-net
+      - mosquitto-net
+    ports:
+      - "${AGV_STATE_SERVER_PORT}:${AGV_STATE_SERVER_PORT}"
+    expose:
+      - "${AGV_STATE_SERVER_PORT}"
+  movement_request_server:
+    container_name: movement_request_server
+    depends_on:
+      - load_map
+    image: ${MOVEMENT_REQUEST_SERVER_IMAGE}
+    env_file:
+      - .env
+    command:
+      bash -c "ls && python -m uvicorn main:app --host ${ALL_IPS} "
+    networks:
+      - valkey-net
+    ports:
+      - ${MOVEMENT_REQUEST_SERVER_PORT}:${MOVEMENT_REQUEST_SERVER_PORT}
+    expose:
+      - "${MOVEMENT_REQUEST_SERVER_PORT}"
+networks:
+  fiware-net:
+    external: true
+  valkey-net:
+    external: true
+  mapf-net:
+    name: mapf-net
+    driver: bridge
+  mosquitto-net:
+    external: true

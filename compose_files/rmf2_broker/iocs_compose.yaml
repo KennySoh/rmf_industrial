@@ -1,0 +1,299 @@
+networks:
+  rmf-network:
+    name: rmf2_broker_rmf-network
+    external: true
+services:
+  monitor:
+    container_name: "monitor"
+    build:
+      dockerfile: ./Containers/Monitor.Dockerfile
+      args: 
+        BUILD: ${BUILD}
+        NAME: "monitor"
+        PORT: ${PORT_MONITOR}
+        LOGGER: ${HOST_MONITOR}
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_MONITOR}
+    ports:
+    - "${EXPOSED_MONITOR}:${PORT_MONITOR}"
+    
+  scorpio:
+    build:
+      dockerfile: ./Containers/scorpio.Dockerfile
+    environment:
+      DBHOST: ${HOST_POSTGRES}
+    ports:
+      - "9090:${PORT_NGSI_LD}"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_NGSI_LD}
+    labels:
+      description: NGSI-LD Context broker
+  postgres:
+    build:
+      context: ./Containers/Postgres
+    ports:
+      - ${EXPOSED_POSTGRES}:${PORT_POSTGRES}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_POSTGRES}
+    # volumes:
+    #   - ./data_volume/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "${POSTGRES_DB}" ]
+      interval: 10s
+      timeout: 60s
+      retries: 5
+  nginxproxy:
+    container_name: "rproxy"
+    build:
+      context: ./Containers/docker-nginx
+    ports:
+      - "${EXPOSED_PROXY}:${PORT_PROXY}"
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_PROXY}
+    depends_on:
+      - scorpio
+      - orion
+  proxy:
+    container_name: "rmf_proxy"
+    build:
+      dockerfile: ./Containers/RmfProxy.Dockerfile
+      args: 
+        NAME: "rmf_proxy"
+        PORT: ${PORT_RMF_PROXY}
+        LOGGER: ${HOST_RMF_PROXY}
+        BUILD: ${BUILD}
+    ports:
+      - "${EXPOSED_RMF_PROXY}:${PORT_RMF_PROXY}"
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_RMF_PROXY}
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      
+
+  redis:
+    image: redis:latest
+    ports:
+      - "${EXPOSED_REDIS}:${PORT_REDIS}"
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_REDIS}
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+      interval: 5s
+  mongodb:
+    image: mongo:latest
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_MONGO}
+    container_name: rmf-mongodb
+    ports:
+      - "${EXPOSED_MONGO}:${PORT_MONGO}"
+    volumes:
+      - ./data_volume/mongodb:/data/db
+    healthcheck:
+      test: ["CMD","mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+  orion:
+    container_name: orion
+    image: fiware/orion
+    command:
+      -dbURI mongodb://${HOST_MONGO}:${PORT_MONGO}
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_NGSI_V2}
+    ports:
+    - "${EXPOSED_NGSI_V2}:${PORT_NGSI_V2}"
+    depends_on:
+      mongodb: 
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://${HOST_NGSI_V2}:${PORT_NGSI_V2}/v2/"]
+      timeout: 10s
+      interval: 10s
+      retries: 3
+  rabbitmq:
+    image: rabbitmq:3-management
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_AMQP}
+        - rmf2_broker-rabbitmq-1
+    ports:
+      - "${EXPOSED_AMQP}:${PORT_AMQP}"
+      - "${EXPOSED_AMQP_ADMIN}:${PORT_AMQP_ADMIN}"
+    healthcheck:
+      test: "rabbitmq-diagnostics -q ping"
+      timeout: 5s
+      interval: 10s
+      retries: 3
+  eventmgr:
+    container_name: "evt_mgr"
+    build:
+      dockerfile: ./Containers/EventMgr.Dockerfile
+      args: 
+        BUILD: ${BUILD}
+        NAME: "event_mgr"
+        PORT: ${PORT_EVENT_MGR}
+        LOGGER: ${HOST_EVENT_MGR}
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_EVENT_MGR}
+    ports:
+    - "${EXPOSED_EVENT_MGR}:${PORT_EVENT_MGR}"
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+  it-connector:
+    container_name: "it_connector"
+    
+    build:
+      dockerfile: ./Containers/DataConnectors.Dockerfile
+      args: 
+        BUILD: ${BUILD}
+        NAME: "it_connector"
+        PORT: ${PORT_CONNECTOR}
+        LOGGER: ${HOST_SWAGGER}
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_CONNECTOR}
+    ports:
+    - "${EXPOSED_CONNECTOR}:${PORT_CONNECTOR}"
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://${HOST_CONNECTOR}:${PORT_CONNECTOR}/docs || exit 1
+      timeout: 10s
+      interval: 10s
+      retries: 3
+  rmf-swagger:
+    container_name: "rmf-swagger"
+    build:
+      dockerfile: ./Containers/FiwareSwagger.Dockerfile
+      args: 
+        BUILD: ${BUILD}
+        NAME: "rmf-swagger"
+        PORT: ${PORT_SWAGGER}
+        LOGGER: "#"
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_SWAGGER}
+    ports:
+    - "${EXPOSED_SWAGGER}:${PORT_SWAGGER}"
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://${HOST_SWAGGER}:${PORT_SWAGGER} || exit 1
+      timeout: 10s
+      retries: 3
+      interval: 10s
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      orion:
+        condition: service_healthy
+      scorpio:
+        condition: service_healthy 
+      it-connector:
+        condition: service_healthy
+  rmf-logger:
+    container_name: "rmf-logger"
+
+    build:
+      dockerfile: ./Containers/DataLogger.Dockerfile
+      args:
+        BUILD: ${BUILD}
+        NAME: "rmf-logger"
+        PORT: ${PORT_LOGGER}
+        LOGGER: ${HOST_LOGGER}
+    environment:
+      HOST_LOGGER_DB: ${HOST_LOGGER_DB}
+      PORT_LOGGER_DB: ${PORT_LOGGER_DB}
+      LOGGING_DATABASE: ${LOGGING_DATABASE}
+    command: >
+      sh -c "sed -i 's/HOST_LOGGER_DB=test-logger-database/HOST_LOGGER_DB=postgres-loggers/; s/PORT_LOGGER_DB=5431/PORT_LOGGER_DB=5433/' /home/node/source/Applications/.env && npm run start:logger -- container"
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_LOGGER}
+    ports:
+    - "${EXPOSED_LOGGER}:${PORT_LOGGER}"
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://${HOST_CONNECTOR}:${PORT_CONNECTOR}/docs || exit 1
+      timeout: 10s
+      interval: 10s
+      retries: 3
+
+
+
+  postgres-loggers:
+    build:
+      context: ./Containers/Logger
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    expose:
+      - "${PORT_LOGGER_DB}" # Publishes 5433 to other containers but NOT to host machine
+    ports:
+      - "${PORT_LOGGER_DB}:${PORT_LOGGER_DB}"
+    networks:
+      rmf-network:
+        aliases:
+        - ${HOST_LOGGER_DB}
+    volumes:
+      - ./data_volume/logger:/var/lib/postgresql/data
+    command: -p ${PORT_LOGGER_DB}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "${POSTGRES_DB}" ]
+      interval: 10s
+      timeout: 60s
+      retries: 5

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  amqp_interface:
+    container_name: amqp_interface
+    image: ${AMQP_INTERFACE_IMAGE}
+    env_file:
+      - .env
+    ports:
+      - "${AMQP_INTERFACE_PORT}:${AMQP_INTERFACE_PORT}"
+      # - "${AMQP_PORT}:${AMQP_PORT}"
+      
+    expose:
+      - "${AMQP_INTERFACE_PORT}"
+      # - "${AMQP_PORT}"
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash 
+      && ros2 run amqp_interface amqp_interface http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} ${MQTT_SERVER_HOST} ${AMQP_INTERFACE_PORT} ${AMQP_HOST}:${AMQP_PORT} ${AMQP_QUEUE_NAME}"
+    networks:
+      - rmf2_broker_rmf-network
+networks:
+  rmf2_broker_rmf-network:
+    external: true

@@ -1,0 +1,118 @@
+version: '3'
+services:
+  map_fiware:
+    container_name: fiware_map
+    image: ${FIWARE_MAP_SERVER_IMAGE}
+    # build: /home/rosi/workspaces/test_ws/src/fiware/fiware_map/.
+    env_file:
+      - .env
+    ports:
+      - "${MAP_SERVER_PORT}:${MAP_SERVER_PORT}"
+    expose:
+      - "${MAP_SERVER_PORT}"
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash 
+      && ros2 run fiware_map fiware_map_server http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} ${ALL_IPS} ${MAP_SERVER_PORT}"
+    networks:
+      - rmf2_broker_rmf-network
+  load_map:
+    container_name: load_map
+    image: ${FIWARE_MAP_SERVER_IMAGE}
+    env_file:
+      - .env
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash 
+      && ros2 run fiware_map load_maps http://${MAP_SERVER_HOST}:${MAP_SERVER_PORT} rmf1"
+    networks:
+      - rmf2_broker_rmf-network
+    depends_on:
+      - map_fiware
+  # mapf_fiware:
+  #   container_name: fiware_mapf
+  #   image: ${FIWARE_MAPF_SERVER_IMAGE}
+  #   depends_on:
+  #     - load_map
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - "${MAPF_MQTT_CLIENT_PORT}:${MAPF_MQTT_CLIENT_PORT}"
+  #   expose:
+  #     - "${MAPF_MQTT_CLIENT_PORT}"
+  #   command: >
+  #     bash -c " source /colcon_ws/install/setup.bash 
+  #     && ros2 run mapf_fiware mapf_fiware http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} ${MQTT_SERVER_HOST} ${MAPF_MQTT_CLIENT_PORT} ${BUILDING_NAME}"
+  #   networks:
+  #     - rmf2_broker_rmf-network
+  mapf_mrs:
+    container_name: mapf_mrs
+    image: ${FIWARE_MAPF_SERVER_IMAGE}
+    depends_on:
+      - adg_executor
+    env_file:
+      - .env
+    ports:
+      - "${MRS_MQTT_SERVER_PORT}:${MRS_MQTT_SERVER_PORT}"
+    expose:
+      - "${MRS_MQTT_SERVER_PORT}"
+    command: >
+      bash -c " source /colcon_ws/install/setup.bash
+      && ros2 run mapf_fiware movement_request_server_fiware http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} ${MQTT_SERVER_HOST} ${MRS_MQTT_SERVER_PORT} http://${ALL_IPS}:${MOVEMENT_REQUEST_SERVER_PORT} ${REDIS_HOST} ${REDIS_PORT} true rmf2_broker-rabbitmq-1 5672"
+    networks:
+      - rmf2_broker_rmf-network
+  mapf_solver:
+    container_name: mapf_solver
+    depends_on:
+      - load_map
+    image: registry.gitlab.com/rosi-ap/rmf2/mapf_service:release-2.0
+    # NEW IMAGE (with subprocess isolation fix):
+    # image: mapf_service-mapf_solver
+    env_file:
+      - .env
+    command: >
+      bash -c "source /colcon_ws/install/setup.bash && ros2 run mapf run_mapf_service mapf_solver ${MAPF_SOLVER_SERVER_PORT}"
+    networks:
+      - mapf-net
+    ports:
+      - "${MAPF_SOLVER_SERVER_PORT}:${MAPF_SOLVER_SERVER_PORT}"
+    expose:
+      - "${MAPF_SOLVER_SERVER_PORT}"
+  adg_executor:
+    container_name: adg_executor
+    depends_on:
+      - load_map
+    image: ${MAPF_EXECUTION_IMAGE}
+    env_file:
+      - .env
+    command: >
+      bash -c "source /colcon_ws/install/setup.bash && cd /colcon_ws/src/mapf_execution &&
+      python3 -u -m adg_executor.main --mqtt_host ${MQTT_SERVER_HOST} --mqtt_port ${ADG_MQTT_PORT} --redis_host ${REDIS_HOST} --redis_port ${REDIS_PORT} --solver_url http://${MAPF_SOLVER_SERVER_HOST}:${MAPF_SOLVER_SERVER_PORT} --context_broker_url http://${CONTEXT_BROKER_HOST}:${CONTEXT_BROKER_PORT} --map_name ${BUILDING_NAME} --agent ${AGENT_NAME}"
+    networks:
+      - rmf2_broker_rmf-network
+      - mapf-net
+    ports:
+      - "${AGV_STATE_SERVER_PORT}:${AGV_STATE_SERVER_PORT}"
+      - "${ADG_MQTT_PORT}:${ADG_MQTT_PORT}"
+    expose:
+      - "${AGV_STATE_SERVER_PORT}"
+      - "${ADG_MQTT_PORT}"
+  movement_request_server:
+    container_name: movement_request_server
+    depends_on:
+      - load_map
+    image: ${MOVEMENT_REQUEST_SERVER_IMAGE}
+    env_file:
+      - .env
+    command:
+      bash -c "ls && python -m uvicorn main:app --port ${MOVEMENT_REQUEST_SERVER_PORT} --host ${ALL_IPS} "
+    networks:
+      - rmf2_broker_rmf-network
+    ports:
+      - ${MOVEMENT_REQUEST_SERVER_PORT}:${MOVEMENT_REQUEST_SERVER_PORT}
+    expose:
+      - "${MOVEMENT_REQUEST_SERVER_PORT}"
+networks:
+  rmf2_broker_rmf-network:
+    external: true
+  mapf-net:
+    name: mapf-net
+    driver: bridge

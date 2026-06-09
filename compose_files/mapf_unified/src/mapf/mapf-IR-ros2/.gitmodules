@@ -1,0 +1,4 @@
+[submodule "mapf-IR"]
+	path = mapf-IR
+	url = https://github.com/tanjpg/mapf-IR.git
+	branch = feature/glenn/lib-mapf-enhancements

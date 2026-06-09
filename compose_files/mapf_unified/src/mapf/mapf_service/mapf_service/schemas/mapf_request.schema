@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "mapfile": {
+      "type": "string"
+    },
+    "solver": {
+      "type": "string"
+    },
+    "max_computation_time": {
+      "type": "integer"
+    },
+    "max_timestep": {
+      "type": "integer"
+    },
+    "obstacles": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "coordinate": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            }
+          },
+          "required": [
+            "coordinate"
+          ]
+        }
+      ]
+    },
+    "tasks": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "agent_name": {
+              "type": "string"
+            },
+            "start_position": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            },
+            "end_position": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            }
+          },
+          "required": [
+            "agent_name",
+            "start_position",
+            "end_position"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "agent_name": {
+              "type": "string"
+            },
+            "start_position": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            },
+            "end_position": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            }
+          },
+          "required": [
+            "agent_name",
+            "start_position",
+            "end_position"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "mapfile",
+    "solver",
+    "max_computation_time",
+    "max_timestep",
+    "tasks"
+  ]
+}

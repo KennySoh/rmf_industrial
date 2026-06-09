@@ -1,0 +1,18 @@
+cost: 5
+schedule:
+  robot_C:
+  - t: 0
+    x: 3
+    y: 3
+  - t: 1
+    x: 4
+    y: 3
+  - t: 2
+    x: 4
+    y: 4
+  - t: 3
+    x: 5
+    y: 4
+  - t: 4
+    x: 5
+    y: 5

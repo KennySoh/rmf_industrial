@@ -1,0 +1,21 @@
+agv_description:
+  agv_id: 'mir1353' # The AGV's ID, used as a part of the MQTT ID
+  manufacturer: 'MiR' # The manufactrer of the AGV, used in the MQTT topic and headers
+  serial_number: '1353' # The serial number of the AGV, used in the MQTT topic and headers
+  description: 'MiR 1353 Description' # The description of the AGV, part of the factsheet
+  initial_position:
+    x: 1.78
+    y: 9.31
+    theta: -1.57
+
+module:
+  MQTT:
+    enable_cert_check: false # Enable MQTT certificate check
+    interface: 'uagv' # The interface used for the MQTT topic
+    server: 'tcp://localhost:1883' # The MQTT connection string (as in PAHO)
+    use_ssl: false # Use SSL for the MQTT connection
+    version_overwrite: 'v2' # The version used in the MQTT topic
+  StateUpdateTimer:
+    max_update_period_ms: 10000 # The maximum state update period in ms
+  VisualizationTimer:
+    visualization_period_ms: 30000 # The visualization period in ms
