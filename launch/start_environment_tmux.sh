@@ -12,7 +12,7 @@
 #   ./start_environment_tmux.sh --help     # usage
 #
 # On a failed gate the failing pane's last lines are dumped to the terminal and the
-# session is LEFT RUNNING so you can `tmux attach -t ihi_demo`.
+# session is LEFT RUNNING so you can `tmux attach -t RMF2_Demo`.
 
 # Catch unset-variable typos and honest pipe failures. NOT -e: probes return 1 on
 # timeout and we handle that ourselves.
@@ -26,7 +26,7 @@ set -uo pipefail
 #   │   ├── launch/                 -> LAUNCH              (this script)
 #   │   └── test_scripts/           -> TESTS
 #   ├── rmf2_launcher_repo/         -> LAUNCHER_DIR        (dashboard / rmf2-launcher)
-#   └── simulation/RMF2_new_sim.sh  -> SIM
+#   └── simulation/Linux/RMF2_SIM.sh -> SIM
 #
 LAUNCH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"   # this script's dir
 ROS_INDUSTRIAL_DIR="$(dirname "$LAUNCH")"
@@ -57,7 +57,7 @@ STEPS=(
   "4|MAPF (unified)|Services.0|'$LAUNCH/rmf2_unified_mapf_control.sh' start|port:8888|120"
   "5|Task Orchestrator|Services.1|'$LAUNCH/task_orchestrator_control.sh' start|url:http://localhost:2727/health_check|60"
   "6|Devices (VDA5050)|Devices.0|'$LAUNCH/rmf2_res_vda5050_control.sh' start|logmatch:vda5050_fiware:state|60"
-#   "7|Simulation|Sim.0|'$SIM'|sleep:10|-"
+  "7|Simulation|Sim.0|'$SIM'|sleep:10|-"
   "8|Init System|InitSystem.0|'$LAUNCH/send_init_warehouse_v2.sh'|sleep:5|-"
 #   "9|Send Task|SendTask.0|cd '$TESTS' && python3 send_parallel_workflow_3_robots.py|sleep:3|-"
 )
@@ -168,7 +168,7 @@ attach_session() {
 
 print_help() {
     cat <<'EOF'
-IHI Phase 2 Final Demo - tmux Environment Startup
+RMF2 Demo - tmux Environment Startup
 
 One step table runs inside tmux: every step is visible in its own pane while the
 orchestrator gates each step on a health probe before moving on.
@@ -180,7 +180,7 @@ Usage:
   ./start_environment_tmux.sh --help     # usage
 
 On a failed gate the failing pane's last lines are dumped to the terminal and the
-session is LEFT RUNNING so you can: tmux attach -t ihi_demo
+session is LEFT RUNNING so you can: tmux attach -t RMF2_Demo
 EOF
 }
 

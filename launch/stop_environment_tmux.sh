@@ -128,10 +128,10 @@ kill_session() {
 
 print_help() {
     cat <<'EOF'
-IHI Phase 2 Final Demo - tmux Environment Teardown
+RMF2 Demo - tmux Environment Teardown
 
 Stops everything start_environment_tmux.sh started, in reverse order, then kills
-the ihi_demo tmux session. Best-effort: a single failure never aborts the rest.
+the RMF2_Demo tmux session. Best-effort: a single failure never aborts the rest.
 
 Usage:
   ./stop_environment_tmux.sh            # graceful stop + kill the tmux session

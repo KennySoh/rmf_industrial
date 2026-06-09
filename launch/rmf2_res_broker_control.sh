@@ -42,5 +42,5 @@ fi
 if [ "$COMMAND" == "start" ]; then
     docker compose -f "$COMPOSE_FILE" --project-directory "$PROJECT_DIR" up -d &
 elif [ "$COMMAND" == "stop" ]; then
-    docker compose -f "$COMPOSE_FILE" --project-directory "$PROJECT_DIR" down &
+    docker compose -f "$COMPOSE_FILE" --project-directory "$PROJECT_DIR" down
 fi
