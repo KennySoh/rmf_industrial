@@ -15,7 +15,7 @@ flowchart LR
 
     TO --> MAPF
     MAPF --> VDA
-    SIM --> VDA
+    VDA --> SIM
 ```
 
 
