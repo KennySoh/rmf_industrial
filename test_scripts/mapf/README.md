@@ -79,7 +79,7 @@ cd <path/to/workspace>/ros_industrial_demo/test_scripts/mapf
 # default: 3 random agents on the warehouse_v2 map
 ./mapf_solver_test.py
 ```
-Sample Output: 
+Sample Output:
 
 ![Three random agents solved and visualized](docs/test_three_random_agent.gif)
 
@@ -90,6 +90,7 @@ Sample Output:
 ```
 
 Sample Output: 
+
 ![Three Own Agent](docs/test_own_agent.gif)
 ```bash
 
@@ -98,6 +99,7 @@ Sample Output:
 ```
 
 Sample Output: 
+
 ![Random Agent, different Solver](docs/test_other_solver.gif)
 
 
