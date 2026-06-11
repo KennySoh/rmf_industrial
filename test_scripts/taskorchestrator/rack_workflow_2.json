@@ -6,7 +6,7 @@
   "ops": {
     "wf2_p1_amr13_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR13->Rack13WP",
       "next": "wf2_p1_amr13_liftrack",
       "config": {
@@ -18,7 +18,7 @@
     },
     "wf2_p1_amr13_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr13_buf",
       "config": {
@@ -35,7 +35,7 @@
     },
     "wf2_p1_amr14_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR14->Rack14WP",
       "next": "wf2_p1_amr14_liftrack",
       "config": {
@@ -47,7 +47,7 @@
     },
     "wf2_p1_amr14_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr14_buf",
       "config": {
@@ -64,7 +64,7 @@
     },
     "wf2_p1_amr15_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR15->Rack15WP",
       "next": "wf2_p1_amr15_liftrack",
       "config": {
@@ -76,7 +76,7 @@
     },
     "wf2_p1_amr15_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr15_buf",
       "config": {
@@ -93,7 +93,7 @@
     },
     "wf2_p1_amr16_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR16->Rack16WP",
       "next": "wf2_p1_amr16_liftrack",
       "config": {
@@ -105,7 +105,7 @@
     },
     "wf2_p1_amr16_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr16_buf",
       "config": {
@@ -122,7 +122,7 @@
     },
     "wf2_p1_amr17_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR17->Rack17WP",
       "next": "wf2_p1_amr17_liftrack",
       "config": {
@@ -134,7 +134,7 @@
     },
     "wf2_p1_amr17_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr17_buf",
       "config": {
@@ -151,7 +151,7 @@
     },
     "wf2_p1_amr18_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR18->Rack18WP",
       "next": "wf2_p1_amr18_liftrack",
       "config": {
@@ -163,7 +163,7 @@
     },
     "wf2_p1_amr18_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr18_buf",
       "config": {
@@ -180,7 +180,7 @@
     },
     "wf2_p1_amr19_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR19->Rack19WP",
       "next": "wf2_p1_amr19_liftrack",
       "config": {
@@ -192,7 +192,7 @@
     },
     "wf2_p1_amr19_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr19_buf",
       "config": {
@@ -209,7 +209,7 @@
     },
     "wf2_p1_amr20_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR20->Rack20WP",
       "next": "wf2_p1_amr20_liftrack",
       "config": {
@@ -221,7 +221,7 @@
     },
     "wf2_p1_amr20_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr20_buf",
       "config": {
@@ -238,7 +238,7 @@
     },
     "wf2_p1_amr21_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR21->Rack21WP",
       "next": "wf2_p1_amr21_liftrack",
       "config": {
@@ -250,7 +250,7 @@
     },
     "wf2_p1_amr21_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr21_buf",
       "config": {
@@ -267,7 +267,7 @@
     },
     "wf2_p1_amr22_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR22->Rack22WP",
       "next": "wf2_p1_amr22_liftrack",
       "config": {
@@ -279,7 +279,7 @@
     },
     "wf2_p1_amr22_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr22_buf",
       "config": {
@@ -296,7 +296,7 @@
     },
     "wf2_p1_amr23_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR23->Rack23WP",
       "next": "wf2_p1_amr23_liftrack",
       "config": {
@@ -308,7 +308,7 @@
     },
     "wf2_p1_amr23_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr23_buf",
       "config": {
@@ -325,7 +325,7 @@
     },
     "wf2_p1_amr24_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR24->Rack24WP",
       "next": "wf2_p1_amr24_liftrack",
       "config": {
@@ -337,7 +337,7 @@
     },
     "wf2_p1_amr24_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr24_buf",
       "config": {
@@ -372,7 +372,7 @@
     },
     "wf2_r1_amr13_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR13->Manip",
       "next": "wf2_r1_amr13_depal1",
       "config": {
@@ -384,7 +384,7 @@
     },
     "wf2_r1_amr13_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r1_amr13_depal2",
       "config": {
@@ -398,7 +398,7 @@
     },
     "wf2_r1_amr13_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r1_amr13_depal3",
       "config": {
@@ -412,7 +412,7 @@
     },
     "wf2_r1_amr13_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r1_amr13_depal4",
       "config": {
@@ -426,7 +426,7 @@
     },
     "wf2_r1_amr13_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r1_amr13_to_conveyor",
       "config": {
@@ -440,7 +440,7 @@
     },
     "wf2_r1_amr13_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR13->Conveyor",
       "next": "wf2_r1_active_buf",
       "config": {
@@ -455,7 +455,7 @@
     },
     "wf2_r1_amr14_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR14->HoldingPoint1",
       "next": "wf2_r1_hold1_buf",
       "config": {
@@ -470,7 +470,7 @@
     },
     "wf2_r1_amr15_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR15->HoldingPoint2",
       "next": "wf2_r1_hold2_buf",
       "config": {
@@ -502,7 +502,7 @@
     },
     "wf2_r2_amr14_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR14->Manip",
       "next": "wf2_r2_amr14_depal1",
       "config": {
@@ -514,7 +514,7 @@
     },
     "wf2_r2_amr14_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r2_amr14_depal2",
       "config": {
@@ -528,7 +528,7 @@
     },
     "wf2_r2_amr14_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r2_amr14_depal3",
       "config": {
@@ -542,7 +542,7 @@
     },
     "wf2_r2_amr14_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r2_amr14_depal4",
       "config": {
@@ -556,7 +556,7 @@
     },
     "wf2_r2_amr14_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r2_amr14_to_conveyor",
       "config": {
@@ -570,7 +570,7 @@
     },
     "wf2_r2_amr14_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR14->Conveyor",
       "next": "wf2_r2_active_buf",
       "config": {
@@ -585,7 +585,7 @@
     },
     "wf2_exit_amr13_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr13_dropoff2",
       "config": {
@@ -599,7 +599,7 @@
     },
     "wf2_exit_amr13_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr13_dropoff3",
       "config": {
@@ -613,7 +613,7 @@
     },
     "wf2_exit_amr13_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr13_dropoff4",
       "config": {
@@ -627,7 +627,7 @@
     },
     "wf2_exit_amr13_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr13_to_rack",
       "config": {
@@ -641,7 +641,7 @@
     },
     "wf2_exit_amr13_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR13->Rack13WP",
       "next": "wf2_exit_amr13_droprack",
       "config": {
@@ -653,7 +653,7 @@
     },
     "wf2_exit_amr13_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr13_to_origin",
       "config": {
@@ -667,7 +667,7 @@
     },
     "wf2_exit_amr13_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR13->OriginalWP",
       "next": "wf2_exit_amr13_buf",
       "config": {
@@ -682,7 +682,7 @@
     },
     "wf2_r2_amr15_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR15->HoldingPoint1",
       "next": "wf2_r2_hold1_buf",
       "config": {
@@ -697,7 +697,7 @@
     },
     "wf2_r2_amr16_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR16->HoldingPoint2",
       "next": "wf2_r2_hold2_buf",
       "config": {
@@ -730,7 +730,7 @@
     },
     "wf2_r3_amr15_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR15->Manip",
       "next": "wf2_r3_amr15_depal1",
       "config": {
@@ -742,7 +742,7 @@
     },
     "wf2_r3_amr15_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r3_amr15_depal2",
       "config": {
@@ -756,7 +756,7 @@
     },
     "wf2_r3_amr15_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r3_amr15_depal3",
       "config": {
@@ -770,7 +770,7 @@
     },
     "wf2_r3_amr15_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r3_amr15_depal4",
       "config": {
@@ -784,7 +784,7 @@
     },
     "wf2_r3_amr15_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r3_amr15_to_conveyor",
       "config": {
@@ -798,7 +798,7 @@
     },
     "wf2_r3_amr15_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR15->Conveyor",
       "next": "wf2_r3_active_buf",
       "config": {
@@ -813,7 +813,7 @@
     },
     "wf2_exit_amr14_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr14_dropoff2",
       "config": {
@@ -827,7 +827,7 @@
     },
     "wf2_exit_amr14_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr14_dropoff3",
       "config": {
@@ -841,7 +841,7 @@
     },
     "wf2_exit_amr14_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr14_dropoff4",
       "config": {
@@ -855,7 +855,7 @@
     },
     "wf2_exit_amr14_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr14_to_rack",
       "config": {
@@ -869,7 +869,7 @@
     },
     "wf2_exit_amr14_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR14->Rack14WP",
       "next": "wf2_exit_amr14_droprack",
       "config": {
@@ -881,7 +881,7 @@
     },
     "wf2_exit_amr14_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr14_to_origin",
       "config": {
@@ -895,7 +895,7 @@
     },
     "wf2_exit_amr14_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR14->OriginalWP",
       "next": "wf2_exit_amr14_buf",
       "config": {
@@ -910,7 +910,7 @@
     },
     "wf2_r3_amr16_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR16->HoldingPoint1",
       "next": "wf2_r3_hold1_buf",
       "config": {
@@ -925,7 +925,7 @@
     },
     "wf2_r3_amr17_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR17->HoldingPoint2",
       "next": "wf2_r3_hold2_buf",
       "config": {
@@ -958,7 +958,7 @@
     },
     "wf2_r4_amr16_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR16->Manip",
       "next": "wf2_r4_amr16_depal1",
       "config": {
@@ -970,7 +970,7 @@
     },
     "wf2_r4_amr16_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r4_amr16_depal2",
       "config": {
@@ -984,7 +984,7 @@
     },
     "wf2_r4_amr16_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r4_amr16_depal3",
       "config": {
@@ -998,7 +998,7 @@
     },
     "wf2_r4_amr16_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r4_amr16_depal4",
       "config": {
@@ -1012,7 +1012,7 @@
     },
     "wf2_r4_amr16_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r4_amr16_to_conveyor",
       "config": {
@@ -1026,7 +1026,7 @@
     },
     "wf2_r4_amr16_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR16->Conveyor",
       "next": "wf2_r4_active_buf",
       "config": {
@@ -1041,7 +1041,7 @@
     },
     "wf2_exit_amr15_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr15_dropoff2",
       "config": {
@@ -1055,7 +1055,7 @@
     },
     "wf2_exit_amr15_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr15_dropoff3",
       "config": {
@@ -1069,7 +1069,7 @@
     },
     "wf2_exit_amr15_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr15_dropoff4",
       "config": {
@@ -1083,7 +1083,7 @@
     },
     "wf2_exit_amr15_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr15_to_rack",
       "config": {
@@ -1097,7 +1097,7 @@
     },
     "wf2_exit_amr15_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR15->Rack15WP",
       "next": "wf2_exit_amr15_droprack",
       "config": {
@@ -1109,7 +1109,7 @@
     },
     "wf2_exit_amr15_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr15_to_origin",
       "config": {
@@ -1123,7 +1123,7 @@
     },
     "wf2_exit_amr15_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR15->OriginalWP",
       "next": "wf2_exit_amr15_buf",
       "config": {
@@ -1138,7 +1138,7 @@
     },
     "wf2_r4_amr17_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR17->HoldingPoint1",
       "next": "wf2_r4_hold1_buf",
       "config": {
@@ -1153,7 +1153,7 @@
     },
     "wf2_r4_amr18_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR18->HoldingPoint2",
       "next": "wf2_r4_hold2_buf",
       "config": {
@@ -1186,7 +1186,7 @@
     },
     "wf2_r5_amr17_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR17->Manip",
       "next": "wf2_r5_amr17_depal1",
       "config": {
@@ -1198,7 +1198,7 @@
     },
     "wf2_r5_amr17_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r5_amr17_depal2",
       "config": {
@@ -1212,7 +1212,7 @@
     },
     "wf2_r5_amr17_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r5_amr17_depal3",
       "config": {
@@ -1226,7 +1226,7 @@
     },
     "wf2_r5_amr17_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r5_amr17_depal4",
       "config": {
@@ -1240,7 +1240,7 @@
     },
     "wf2_r5_amr17_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r5_amr17_to_conveyor",
       "config": {
@@ -1254,7 +1254,7 @@
     },
     "wf2_r5_amr17_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR17->Conveyor",
       "next": "wf2_r5_active_buf",
       "config": {
@@ -1269,7 +1269,7 @@
     },
     "wf2_exit_amr16_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr16_dropoff2",
       "config": {
@@ -1283,7 +1283,7 @@
     },
     "wf2_exit_amr16_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr16_dropoff3",
       "config": {
@@ -1297,7 +1297,7 @@
     },
     "wf2_exit_amr16_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr16_dropoff4",
       "config": {
@@ -1311,7 +1311,7 @@
     },
     "wf2_exit_amr16_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr16_to_rack",
       "config": {
@@ -1325,7 +1325,7 @@
     },
     "wf2_exit_amr16_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR16->Rack16WP",
       "next": "wf2_exit_amr16_droprack",
       "config": {
@@ -1337,7 +1337,7 @@
     },
     "wf2_exit_amr16_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr16_to_origin",
       "config": {
@@ -1351,7 +1351,7 @@
     },
     "wf2_exit_amr16_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR16->OriginalWP",
       "next": "wf2_exit_amr16_buf",
       "config": {
@@ -1366,7 +1366,7 @@
     },
     "wf2_r5_amr18_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR18->HoldingPoint1",
       "next": "wf2_r5_hold1_buf",
       "config": {
@@ -1381,7 +1381,7 @@
     },
     "wf2_r5_amr19_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR19->HoldingPoint2",
       "next": "wf2_r5_hold2_buf",
       "config": {
@@ -1414,7 +1414,7 @@
     },
     "wf2_r6_amr18_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR18->Manip",
       "next": "wf2_r6_amr18_depal1",
       "config": {
@@ -1426,7 +1426,7 @@
     },
     "wf2_r6_amr18_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r6_amr18_depal2",
       "config": {
@@ -1440,7 +1440,7 @@
     },
     "wf2_r6_amr18_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r6_amr18_depal3",
       "config": {
@@ -1454,7 +1454,7 @@
     },
     "wf2_r6_amr18_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r6_amr18_depal4",
       "config": {
@@ -1468,7 +1468,7 @@
     },
     "wf2_r6_amr18_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r6_amr18_to_conveyor",
       "config": {
@@ -1482,7 +1482,7 @@
     },
     "wf2_r6_amr18_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR18->Conveyor",
       "next": "wf2_r6_active_buf",
       "config": {
@@ -1497,7 +1497,7 @@
     },
     "wf2_exit_amr17_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr17_dropoff2",
       "config": {
@@ -1511,7 +1511,7 @@
     },
     "wf2_exit_amr17_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr17_dropoff3",
       "config": {
@@ -1525,7 +1525,7 @@
     },
     "wf2_exit_amr17_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr17_dropoff4",
       "config": {
@@ -1539,7 +1539,7 @@
     },
     "wf2_exit_amr17_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr17_to_rack",
       "config": {
@@ -1553,7 +1553,7 @@
     },
     "wf2_exit_amr17_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR17->Rack17WP",
       "next": "wf2_exit_amr17_droprack",
       "config": {
@@ -1565,7 +1565,7 @@
     },
     "wf2_exit_amr17_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr17_to_origin",
       "config": {
@@ -1579,7 +1579,7 @@
     },
     "wf2_exit_amr17_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR17->OriginalWP",
       "next": "wf2_exit_amr17_buf",
       "config": {
@@ -1594,7 +1594,7 @@
     },
     "wf2_r6_amr19_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR19->HoldingPoint1",
       "next": "wf2_r6_hold1_buf",
       "config": {
@@ -1609,7 +1609,7 @@
     },
     "wf2_r6_amr20_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR20->HoldingPoint2",
       "next": "wf2_r6_hold2_buf",
       "config": {
@@ -1642,7 +1642,7 @@
     },
     "wf2_r7_amr19_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR19->Manip",
       "next": "wf2_r7_amr19_depal1",
       "config": {
@@ -1654,7 +1654,7 @@
     },
     "wf2_r7_amr19_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r7_amr19_depal2",
       "config": {
@@ -1668,7 +1668,7 @@
     },
     "wf2_r7_amr19_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r7_amr19_depal3",
       "config": {
@@ -1682,7 +1682,7 @@
     },
     "wf2_r7_amr19_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r7_amr19_depal4",
       "config": {
@@ -1696,7 +1696,7 @@
     },
     "wf2_r7_amr19_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r7_amr19_to_conveyor",
       "config": {
@@ -1710,7 +1710,7 @@
     },
     "wf2_r7_amr19_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR19->Conveyor",
       "next": "wf2_r7_active_buf",
       "config": {
@@ -1725,7 +1725,7 @@
     },
     "wf2_exit_amr18_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr18_dropoff2",
       "config": {
@@ -1739,7 +1739,7 @@
     },
     "wf2_exit_amr18_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr18_dropoff3",
       "config": {
@@ -1753,7 +1753,7 @@
     },
     "wf2_exit_amr18_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr18_dropoff4",
       "config": {
@@ -1767,7 +1767,7 @@
     },
     "wf2_exit_amr18_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr18_to_rack",
       "config": {
@@ -1781,7 +1781,7 @@
     },
     "wf2_exit_amr18_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR18->Rack18WP",
       "next": "wf2_exit_amr18_droprack",
       "config": {
@@ -1793,7 +1793,7 @@
     },
     "wf2_exit_amr18_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr18_to_origin",
       "config": {
@@ -1807,7 +1807,7 @@
     },
     "wf2_exit_amr18_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR18->OriginalWP",
       "next": "wf2_exit_amr18_buf",
       "config": {
@@ -1822,7 +1822,7 @@
     },
     "wf2_r7_amr20_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR20->HoldingPoint1",
       "next": "wf2_r7_hold1_buf",
       "config": {
@@ -1837,7 +1837,7 @@
     },
     "wf2_r7_amr21_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR21->HoldingPoint2",
       "next": "wf2_r7_hold2_buf",
       "config": {
@@ -1870,7 +1870,7 @@
     },
     "wf2_r8_amr20_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR20->Manip",
       "next": "wf2_r8_amr20_depal1",
       "config": {
@@ -1882,7 +1882,7 @@
     },
     "wf2_r8_amr20_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r8_amr20_depal2",
       "config": {
@@ -1896,7 +1896,7 @@
     },
     "wf2_r8_amr20_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r8_amr20_depal3",
       "config": {
@@ -1910,7 +1910,7 @@
     },
     "wf2_r8_amr20_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r8_amr20_depal4",
       "config": {
@@ -1924,7 +1924,7 @@
     },
     "wf2_r8_amr20_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r8_amr20_to_conveyor",
       "config": {
@@ -1938,7 +1938,7 @@
     },
     "wf2_r8_amr20_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR20->Conveyor",
       "next": "wf2_r8_active_buf",
       "config": {
@@ -1953,7 +1953,7 @@
     },
     "wf2_exit_amr19_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr19_dropoff2",
       "config": {
@@ -1967,7 +1967,7 @@
     },
     "wf2_exit_amr19_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr19_dropoff3",
       "config": {
@@ -1981,7 +1981,7 @@
     },
     "wf2_exit_amr19_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr19_dropoff4",
       "config": {
@@ -1995,7 +1995,7 @@
     },
     "wf2_exit_amr19_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr19_to_rack",
       "config": {
@@ -2009,7 +2009,7 @@
     },
     "wf2_exit_amr19_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR19->Rack19WP",
       "next": "wf2_exit_amr19_droprack",
       "config": {
@@ -2021,7 +2021,7 @@
     },
     "wf2_exit_amr19_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr19_to_origin",
       "config": {
@@ -2035,7 +2035,7 @@
     },
     "wf2_exit_amr19_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR19->OriginalWP",
       "next": "wf2_exit_amr19_buf",
       "config": {
@@ -2050,7 +2050,7 @@
     },
     "wf2_r8_amr21_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR21->HoldingPoint1",
       "next": "wf2_r8_hold1_buf",
       "config": {
@@ -2065,7 +2065,7 @@
     },
     "wf2_r8_amr22_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR22->HoldingPoint2",
       "next": "wf2_r8_hold2_buf",
       "config": {
@@ -2098,7 +2098,7 @@
     },
     "wf2_r9_amr21_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR21->Manip",
       "next": "wf2_r9_amr21_depal1",
       "config": {
@@ -2110,7 +2110,7 @@
     },
     "wf2_r9_amr21_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r9_amr21_depal2",
       "config": {
@@ -2124,7 +2124,7 @@
     },
     "wf2_r9_amr21_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r9_amr21_depal3",
       "config": {
@@ -2138,7 +2138,7 @@
     },
     "wf2_r9_amr21_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r9_amr21_depal4",
       "config": {
@@ -2152,7 +2152,7 @@
     },
     "wf2_r9_amr21_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r9_amr21_to_conveyor",
       "config": {
@@ -2166,7 +2166,7 @@
     },
     "wf2_r9_amr21_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR21->Conveyor",
       "next": "wf2_r9_active_buf",
       "config": {
@@ -2181,7 +2181,7 @@
     },
     "wf2_exit_amr20_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr20_dropoff2",
       "config": {
@@ -2195,7 +2195,7 @@
     },
     "wf2_exit_amr20_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr20_dropoff3",
       "config": {
@@ -2209,7 +2209,7 @@
     },
     "wf2_exit_amr20_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr20_dropoff4",
       "config": {
@@ -2223,7 +2223,7 @@
     },
     "wf2_exit_amr20_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr20_to_rack",
       "config": {
@@ -2237,7 +2237,7 @@
     },
     "wf2_exit_amr20_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR20->Rack20WP",
       "next": "wf2_exit_amr20_droprack",
       "config": {
@@ -2249,7 +2249,7 @@
     },
     "wf2_exit_amr20_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr20_to_origin",
       "config": {
@@ -2263,7 +2263,7 @@
     },
     "wf2_exit_amr20_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR20->OriginalWP",
       "next": "wf2_exit_amr20_buf",
       "config": {
@@ -2278,7 +2278,7 @@
     },
     "wf2_r9_amr22_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR22->HoldingPoint1",
       "next": "wf2_r9_hold1_buf",
       "config": {
@@ -2293,7 +2293,7 @@
     },
     "wf2_r9_amr23_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR23->HoldingPoint2",
       "next": "wf2_r9_hold2_buf",
       "config": {
@@ -2326,7 +2326,7 @@
     },
     "wf2_r10_amr22_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR22->Manip",
       "next": "wf2_r10_amr22_depal1",
       "config": {
@@ -2338,7 +2338,7 @@
     },
     "wf2_r10_amr22_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r10_amr22_depal2",
       "config": {
@@ -2352,7 +2352,7 @@
     },
     "wf2_r10_amr22_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r10_amr22_depal3",
       "config": {
@@ -2366,7 +2366,7 @@
     },
     "wf2_r10_amr22_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r10_amr22_depal4",
       "config": {
@@ -2380,7 +2380,7 @@
     },
     "wf2_r10_amr22_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r10_amr22_to_conveyor",
       "config": {
@@ -2394,7 +2394,7 @@
     },
     "wf2_r10_amr22_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR22->Conveyor",
       "next": "wf2_r10_active_buf",
       "config": {
@@ -2409,7 +2409,7 @@
     },
     "wf2_exit_amr21_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr21_dropoff2",
       "config": {
@@ -2423,7 +2423,7 @@
     },
     "wf2_exit_amr21_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr21_dropoff3",
       "config": {
@@ -2437,7 +2437,7 @@
     },
     "wf2_exit_amr21_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr21_dropoff4",
       "config": {
@@ -2451,7 +2451,7 @@
     },
     "wf2_exit_amr21_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr21_to_rack",
       "config": {
@@ -2465,7 +2465,7 @@
     },
     "wf2_exit_amr21_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR21->Rack21WP",
       "next": "wf2_exit_amr21_droprack",
       "config": {
@@ -2477,7 +2477,7 @@
     },
     "wf2_exit_amr21_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr21_to_origin",
       "config": {
@@ -2491,7 +2491,7 @@
     },
     "wf2_exit_amr21_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR21->OriginalWP",
       "next": "wf2_exit_amr21_buf",
       "config": {
@@ -2506,7 +2506,7 @@
     },
     "wf2_r10_amr23_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR23->HoldingPoint1",
       "next": "wf2_r10_hold1_buf",
       "config": {
@@ -2521,7 +2521,7 @@
     },
     "wf2_r10_amr24_to_hold2": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR24->HoldingPoint2",
       "next": "wf2_r10_hold2_buf",
       "config": {
@@ -2554,7 +2554,7 @@
     },
     "wf2_r11_amr23_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR23->Manip",
       "next": "wf2_r11_amr23_depal1",
       "config": {
@@ -2566,7 +2566,7 @@
     },
     "wf2_r11_amr23_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r11_amr23_depal2",
       "config": {
@@ -2580,7 +2580,7 @@
     },
     "wf2_r11_amr23_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r11_amr23_depal3",
       "config": {
@@ -2594,7 +2594,7 @@
     },
     "wf2_r11_amr23_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r11_amr23_depal4",
       "config": {
@@ -2608,7 +2608,7 @@
     },
     "wf2_r11_amr23_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r11_amr23_to_conveyor",
       "config": {
@@ -2622,7 +2622,7 @@
     },
     "wf2_r11_amr23_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR23->Conveyor",
       "next": "wf2_r11_active_buf",
       "config": {
@@ -2637,7 +2637,7 @@
     },
     "wf2_exit_amr22_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr22_dropoff2",
       "config": {
@@ -2651,7 +2651,7 @@
     },
     "wf2_exit_amr22_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr22_dropoff3",
       "config": {
@@ -2665,7 +2665,7 @@
     },
     "wf2_exit_amr22_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr22_dropoff4",
       "config": {
@@ -2679,7 +2679,7 @@
     },
     "wf2_exit_amr22_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr22_to_rack",
       "config": {
@@ -2693,7 +2693,7 @@
     },
     "wf2_exit_amr22_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR22->Rack22WP",
       "next": "wf2_exit_amr22_droprack",
       "config": {
@@ -2705,7 +2705,7 @@
     },
     "wf2_exit_amr22_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr22_to_origin",
       "config": {
@@ -2719,7 +2719,7 @@
     },
     "wf2_exit_amr22_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR22->OriginalWP",
       "next": "wf2_exit_amr22_buf",
       "config": {
@@ -2734,7 +2734,7 @@
     },
     "wf2_r11_amr24_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR24->HoldingPoint1",
       "next": "wf2_r11_hold1_buf",
       "config": {
@@ -2765,7 +2765,7 @@
     },
     "wf2_r12_amr24_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR24->Manip",
       "next": "wf2_r12_amr24_depal1",
       "config": {
@@ -2777,7 +2777,7 @@
     },
     "wf2_r12_amr24_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r12_amr24_depal2",
       "config": {
@@ -2791,7 +2791,7 @@
     },
     "wf2_r12_amr24_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r12_amr24_depal3",
       "config": {
@@ -2805,7 +2805,7 @@
     },
     "wf2_r12_amr24_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r12_amr24_depal4",
       "config": {
@@ -2819,7 +2819,7 @@
     },
     "wf2_r12_amr24_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r12_amr24_to_conveyor",
       "config": {
@@ -2833,7 +2833,7 @@
     },
     "wf2_r12_amr24_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR24->Conveyor",
       "next": "wf2_r12_active_buf",
       "config": {
@@ -2848,7 +2848,7 @@
     },
     "wf2_exit_amr23_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr23_dropoff2",
       "config": {
@@ -2862,7 +2862,7 @@
     },
     "wf2_exit_amr23_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr23_dropoff3",
       "config": {
@@ -2876,7 +2876,7 @@
     },
     "wf2_exit_amr23_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr23_dropoff4",
       "config": {
@@ -2890,7 +2890,7 @@
     },
     "wf2_exit_amr23_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr23_to_rack",
       "config": {
@@ -2904,7 +2904,7 @@
     },
     "wf2_exit_amr23_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR23->Rack23WP",
       "next": "wf2_exit_amr23_droprack",
       "config": {
@@ -2916,7 +2916,7 @@
     },
     "wf2_exit_amr23_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr23_to_origin",
       "config": {
@@ -2930,7 +2930,7 @@
     },
     "wf2_exit_amr23_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR23->OriginalWP",
       "next": "wf2_exit_amr23_buf",
       "config": {
@@ -2953,7 +2953,7 @@
     },
     "wf2_exit_amr24_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr24_dropoff2",
       "config": {
@@ -2967,7 +2967,7 @@
     },
     "wf2_exit_amr24_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr24_dropoff3",
       "config": {
@@ -2981,7 +2981,7 @@
     },
     "wf2_exit_amr24_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr24_dropoff4",
       "config": {
@@ -2995,7 +2995,7 @@
     },
     "wf2_exit_amr24_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr24_to_rack",
       "config": {
@@ -3009,7 +3009,7 @@
     },
     "wf2_exit_amr24_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR24->Rack24WP",
       "next": "wf2_exit_amr24_droprack",
       "config": {
@@ -3021,7 +3021,7 @@
     },
     "wf2_exit_amr24_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr24_to_origin",
       "config": {
@@ -3035,7 +3035,7 @@
     },
     "wf2_exit_amr24_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR24->OriginalWP",
       "next": "wf2_exit_amr24_buf",
       "config": {
@@ -3096,7 +3096,7 @@
     },
     "wf2_p1_amr25_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR25->Rack25WP",
       "next": "wf2_p1_amr25_liftrack",
       "config": {
@@ -3108,7 +3108,7 @@
     },
     "wf2_p1_amr25_liftrack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "LiftRack",
       "next": "wf2_p1_amr25_buf",
       "config": {
@@ -3125,7 +3125,7 @@
     },
     "wf2_r12_amr25_to_hold1": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR25->HoldingPoint1",
       "next": "wf2_r12_hold1_buf",
       "config": {
@@ -3140,7 +3140,7 @@
     },
     "wf2_r13_amr25_to_manip": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR25->Manip",
       "next": "wf2_r13_amr25_depal1",
       "config": {
@@ -3152,7 +3152,7 @@
     },
     "wf2_r13_amr25_depal1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 1/4",
       "next": "wf2_r13_amr25_depal2",
       "config": {
@@ -3166,7 +3166,7 @@
     },
     "wf2_r13_amr25_depal2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 2/4",
       "next": "wf2_r13_amr25_depal3",
       "config": {
@@ -3180,7 +3180,7 @@
     },
     "wf2_r13_amr25_depal3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 3/4",
       "next": "wf2_r13_amr25_depal4",
       "config": {
@@ -3194,7 +3194,7 @@
     },
     "wf2_r13_amr25_depal4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Depalletize 4/4",
       "next": "wf2_r13_amr25_to_conveyor",
       "config": {
@@ -3208,7 +3208,7 @@
     },
     "wf2_r13_amr25_to_conveyor": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR25->Conveyor",
       "next": "wf2_r13_active_buf",
       "config": {
@@ -3237,7 +3237,7 @@
     },
     "wf2_exit_amr25_dropoff1": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 1/4",
       "next": "wf2_exit_amr25_dropoff2",
       "config": {
@@ -3251,7 +3251,7 @@
     },
     "wf2_exit_amr25_dropoff2": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 2/4",
       "next": "wf2_exit_amr25_dropoff3",
       "config": {
@@ -3265,7 +3265,7 @@
     },
     "wf2_exit_amr25_dropoff3": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 3/4",
       "next": "wf2_exit_amr25_dropoff4",
       "config": {
@@ -3279,7 +3279,7 @@
     },
     "wf2_exit_amr25_dropoff4": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "Dropoff 4/4",
       "next": "wf2_exit_amr25_to_rack",
       "config": {
@@ -3293,7 +3293,7 @@
     },
     "wf2_exit_amr25_to_rack": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR25->Rack25WP",
       "next": "wf2_exit_amr25_droprack",
       "config": {
@@ -3305,7 +3305,7 @@
     },
     "wf2_exit_amr25_droprack": {
       "type": "node",
-      "builder": "TransferNode",
+      "builder": "MQTTTaskRequestNode",
       "display_text": "DropRack",
       "next": "wf2_exit_amr25_to_origin",
       "config": {
@@ -3319,7 +3319,7 @@
     },
     "wf2_exit_amr25_to_origin": {
       "type": "node",
-      "builder": "MapfReplaceNode",
+      "builder": "MAPFGoToNode",
       "display_text": "AMR25->OriginalWP",
       "next": "wf2_exit_amr25_buf",
       "config": {
