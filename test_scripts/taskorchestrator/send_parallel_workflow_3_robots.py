@@ -4,7 +4,7 @@ Send a parallel 3-robot MAPF workflow to the Rust Task Orchestrator via AMQP.
 
 This script creates a crossflow diagram with:
 - fork_clone: splits into 3 parallel branches
-- 3x MapfReplaceNode: one per robot
+- 3x MAPFGoToNode: one per robot
 - 3x buffer: wait points
 - join: waits for all robots to complete
 
@@ -66,7 +66,7 @@ def create_parallel_workflow(robots: list, goals: list) -> dict:
     for i, (node, buffer_id) in enumerate(zip(robot_nodes, buffer_nodes)):
         ops[node["id"]] = {
             "type": "node",
-            "builder": "MapfReplaceNode",
+            "builder": "MAPFGoToNode",
             "next": buffer_id,
             "display_text": f"{node['robot']} -> {node['goal']}",
             "config": {
@@ -142,13 +142,13 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Default: 3 Manufacturer robots using named goals
+  # Default: 3 Manufacturer robots to waypoints P300/P301/P302
   python3 send_parallel_workflow_3_robots.py
 
   # Custom robots and goals
   python3 send_parallel_workflow_3_robots.py \\
       --robots Manufacturer_5,Manufacturer_6,Manufacturer_7 \\
-      --goals Manufacturer_5_goal,Manufacturer_6_goal,Manufacturer_7_goal
+      --goals P300,P301,P302
 
   # Dry-run to see JSON without sending
   python3 send_parallel_workflow_3_robots.py --dry-run
@@ -156,9 +156,9 @@ Examples:
 Valid robots:
   Manufacturer_2 - Manufacturer_25
 
-Named coordinates (from location_coord_map_os_res.json):
-  Manufacturer_X_home  - robot home position
-  Manufacturer_X_goal  - robot goal position
+Goals:
+  Waypoint codes that exist in the map graph (e.g. P300, P301, P302).
+  These must be real map nodes or the MAPF solver will KeyError on the goal.
 """
     )
 
@@ -169,8 +169,8 @@ Named coordinates (from location_coord_map_os_res.json):
     )
     parser.add_argument(
         '--goals',
-        default='Manufacturer_2_goal,Manufacturer_3_goal,Manufacturer_4_goal',
-        help='Comma-separated goal names (default: Manufacturer_2_goal,Manufacturer_3_goal,Manufacturer_4_goal)'
+        default='P300,P301,P302',
+        help='Comma-separated goal waypoints (default: P300,P301,P302)'
     )
     parser.add_argument(
         '--amqp-host',
